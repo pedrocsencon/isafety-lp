@@ -1,0 +1,54 @@
+
+    #gradientText {
+        background: -webkit-linear-gradient(50deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-bottom: 8px;
+      }
+
+  #testbutton {
+    border-radius: 8px;    
+    background: linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926);
+    cursor:pointer;
+  }
+  
+  /* shadow */
+  #testbutton:before {
+    content:'';
+    z-index:1;
+    position:absolute;
+    display:block;
+    width:90%;
+    height:100%;
+    top:15%;
+    left:10%;
+    transition: 0.3s opacity ease-in-out;
+    filter:blur(15px);
+    opacity:0;
+    background: linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926);
+  }
+  
+  #testbutton:hover:before {
+    opacity:1;
+    transition: 0.3s opacity ease-in-out;
+    filter:blur(25px);
+    background: linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926);  
+  }
+  
+  #testbutton:after {
+    content:'Começar agora';
+    text-align:center;
+    line-height:40px;
+    font-size:16px;
+    color: #F7F7F7;
+    font-weight:bold;
+    z-index:5;
+    position:absolute;
+    display:block;
+    border-radius: 8px;
+    width:97%;
+    height:90%;
+    top:5%;
+    left:1.5%;  
+    background-color: #1F1F1F;
+  }

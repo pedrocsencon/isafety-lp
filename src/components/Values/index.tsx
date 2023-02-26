@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Values() {
     const StackMotion = motion(Stack);
     return (
-        <Box width={['95%', '80%' ,'60%']}  overflow='hidden'>
+        <Box width={'100%'}  overflow='hidden'>
             <StackMotion  animate={{ x: [0, -1000, 0] }} transition={{ type: "spring", stiffness: 100, delay: 0.5, duration: 15, repeat: Infinity }} direction='row'>
                 <Text whiteSpace='nowrap'>
                     Melhoria Contínua
