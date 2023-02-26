@@ -19,6 +19,7 @@ import logo_about from '../assets/logo_about.svg'
 
 export default function Home() {
   const StackMotion = motion(Stack)
+  const ButtonMotion = motion(Button)
   const [isLargerThan1000] = useMediaQuery('(min-width: 1000px)')
 
   return (
@@ -59,9 +60,9 @@ export default function Home() {
             </Text>
             <Stack justifyContent={isLargerThan1000 ? 'initial' : 'center'} direction='row' spacing={4}>
               <CTAButton height={12} />
-              <Button height={12} borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Contate-nos</Button>
+              <ButtonMotion whileHover={{scale: 1.05}} _hover={{textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)'}} height={12} borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Contate-nos</ButtonMotion>
             </Stack>
-            <Link to='products' smooth>
+            <Link offset={-24} to='products' smooth>
               <StackMotion justifyContent={isLargerThan1000 ? 'initial' : 'center'}  cursor='pointer' animate={{ y: [0, -2, 2, 0] }} transition={{ type: "spring", stiffness: 100, delay: 0.2, duration: 1, repeat: Infinity }} direction='row' alignItems='center'>
                 <FiChevronsDown size={24} color='#FF595E' />
                 <Text textColor='red.500'>Role para baixo para saber mais</Text>
@@ -76,7 +77,7 @@ export default function Home() {
           <BulletItem Icon={MdSupervisorAccount} text='Treinamentos EAD' />
           <BulletItem Icon={MdComputer} text='Treinamentos IN COMPANY' />
         </SimpleGrid>
-        <Flex marginY={12} alignItems='center' justifyContent='center'>
+        <Flex id='products' marginY={12} alignItems='center' justifyContent='center'>
           <Text textColor='text'>////////////////</Text>
         </Flex>
         <Stack spacing={12} width='100%' alignItems={isLargerThan1000 ? 'initial' : 'center'}>
