@@ -16,6 +16,7 @@ import Head from "next/head";
 import CTAButton from "@/components/CTAButton";
 import illustration from '../assets/illustration.svg'
 import logo_about from '../assets/logo_about.svg'
+import { goToWpp } from "@/utils";
 
 export default function Home() {
   const StackMotion = motion(Stack)
@@ -60,7 +61,7 @@ export default function Home() {
             </Text>
             <Stack justifyContent={isLargerThan1000 ? 'initial' : 'center'} direction='row' spacing={4}>
               <CTAButton height={12} />
-              <ButtonMotion whileHover={{scale: 1.05}} _hover={{textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)'}} height={12} borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Contate-nos</ButtonMotion>
+              <ButtonMotion onClick={goToWpp} whileHover={{scale: 1.05}} _hover={{textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)'}} height={12} borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Contate-nos</ButtonMotion>
             </Stack>
             <Link offset={-24} to='products' smooth>
               <StackMotion justifyContent={isLargerThan1000 ? 'initial' : 'center'}  cursor='pointer' animate={{ y: [0, -2, 2, 0] }} transition={{ type: "spring", stiffness: 100, delay: 0.2, duration: 1, repeat: Infinity }} direction='row' alignItems='center'>
@@ -89,7 +90,7 @@ export default function Home() {
           </Stack>
           <Heading textAlign={isLargerThan1000 ? 'initial' : 'center'}>O que nós oferecemos?</Heading>
           <Text textAlign='center' fontSize='xl' maxWidth={isLargerThan1000 ? '50%' : '90%'} textColor={'text'}>
-            Nós cuidamos de tudo para oferecer a você o melhores dos conteúdos sobre segurança no trabalho
+            Nós cuidamos de tudo para oferecer a você o melhor dos conteúdos sobre segurança no trabalho
           </Text>
           </Stack>
           <Stack direction={isLargerThan1000? 'row' : 'column'} spacing={8}>
@@ -140,7 +141,7 @@ export default function Home() {
           <Image alt="logo_about" src={logo_about}/>
         </Flex>
         <Stack marginTop={24} spacing={8} width='100%' alignItems={'center'} justifyContent='center'>
-            <Heading textAlign='center' width={['95%', '80%' ,'35%']}>Esteja preparado para o <Heading id='gradientText'>mercado de trabalho</Heading></Heading>
+            <Heading textAlign='center' width={['100%', '90%' ,'40%']}><Heading id='gradientText'>Esteja seguro</Heading> com seu conhecimento</Heading>
             <CTAButton height={12}/>
         </Stack>
         <Flex paddingY={12} marginBottom={12} justifyContent='space-between' width='100%' alignItems='center'>

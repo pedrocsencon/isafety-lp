@@ -1,3 +1,4 @@
+import { goTo } from "@/utils";
 import { Box, Button, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -10,7 +11,7 @@ export default function TopBar(){
         <Box>
         <Image src={logo} alt='logo-alt' />
         </Box>
-          <ButtonMotion whileHover={{scale: 1.05}} _hover={{textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)'}} colorScheme={'black'} variant='outline'>Começar agora</ButtonMotion>
+          <ButtonMotion onClick={goTo} whileHover={{scale: 1.05}} _hover={{textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)'}} colorScheme={'black'} variant='outline'>Começar agora</ButtonMotion>
       </Flex>
     )
 }
