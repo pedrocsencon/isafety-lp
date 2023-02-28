@@ -46,6 +46,9 @@ export default function Values() {
                     Inovação
                 </Text>
                 <Text whiteSpace='nowrap'>
+                    ●
+                </Text>
+                <Text whiteSpace='nowrap'>
                     Melhoria Contínua
                 </Text>
                 <Text whiteSpace='nowrap'>
