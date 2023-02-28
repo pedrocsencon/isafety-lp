@@ -17,7 +17,7 @@ import Head from "next/head";
 import CTAButton from "@/components/CTAButton";
 import illustration from '../assets/illustration.svg'
 import logo_about from '../assets/logo_about.svg'
-import { goToWpp } from "@/utils";
+import { goToEmail, goToWpp } from "@/utils";
 
 export default function Home() {
   const StackMotion = motion(Stack)
@@ -152,8 +152,8 @@ export default function Home() {
             © todos os direitos reservados 2023
           </Text>
           <Stack direction='row' spacing={4}>
-            <IconButton variant='outline' colorScheme='red' aria-label="instagram" color={'red.500'} icon={<FaInstagram size={20} />} />
-            <IconButton variant='outline' colorScheme='red' aria-label="instagram" color={'red.500'} icon={<MdOutlineEmail size={24} />} />
+            {/* <IconButton variant='outline' colorScheme='red' aria-label="instagram" color={'red.500'} icon={<FaInstagram size={20} />} /> */}
+            <IconButton onClick={goToEmail} variant='outline' colorScheme='red' aria-label="instagram" color={'red.500'} icon={<MdOutlineEmail size={24} />} />
           </Stack>
         </Flex>
       </Box>
