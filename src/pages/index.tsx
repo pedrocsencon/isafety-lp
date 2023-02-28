@@ -5,9 +5,10 @@ import Values from "@/components/Values";
 import { Box, Button, Flex, Heading, IconButton, SimpleGrid, Stack, Text, useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FiChevronsDown } from 'react-icons/fi'
 import { MdComputer, MdDocumentScanner, MdHealthAndSafety, MdSupervisorAccount, MdSubscriptions, MdLocalHospital, MdChevronRight, MdOutlineEmail, MdFileCopy } from "react-icons/md";
+import {GiBrazil} from 'react-icons/gi'
 
 
 import { Link } from 'react-scroll'
@@ -20,6 +21,7 @@ import { goToWpp } from "@/utils";
 
 export default function Home() {
   const StackMotion = motion(Stack)
+  const FlexMotion = motion(Flex)
   const ButtonMotion = motion(Button)
   const [isLargerThan1000] = useMediaQuery('(min-width: 1000px)')
 
@@ -72,7 +74,8 @@ export default function Home() {
           </Stack>
           {isLargerThan1000 && <Image alt="illustration" src={illustration} />}
         </Flex>
-        <SimpleGrid columns={[1, 2, 4]} spacing={4} paddingY={12} justifyContent='center' alignItems='center' width='100%'>
+        <SimpleGrid columns={[1, 2, 5]} spacing={4} paddingY={12} justifyContent='center' alignItems='center' width='100%'>
+          <BulletItem Icon={GiBrazil} text='Atuação nacional' />
           <BulletItem Icon={MdDocumentScanner} text='Programas e Laudos' />
           <BulletItem Icon={MdHealthAndSafety} text='Qualidade de Vida' />
           <BulletItem Icon={MdSupervisorAccount} text='Treinamentos EAD' />
@@ -154,6 +157,9 @@ export default function Home() {
           </Stack>
         </Flex>
       </Box>
+      <FlexMotion onClick={goToWpp} whileHover={{scale: 1.1, backgroundColor: '#25d366'}} zIndex={1000} cursor='pointer' position='fixed' backgroundColor='white' alignItems='center' justifyContent='center' borderRadius='full' shadow='lg' right={10} bottom={10} width={16} height={16}>
+        <FaWhatsapp color="black" size={24}/>
+      </FlexMotion>
     </>
   )
 }
