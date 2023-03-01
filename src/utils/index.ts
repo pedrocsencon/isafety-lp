@@ -7,5 +7,5 @@ export function goTo(){
   }
 
   export function goToEmail(){
-    window.open('mailto:Comercial@grupoisafety.com.br');
+    window.open('mailto:comercial@grupoisafety.com.br');
   }

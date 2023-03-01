@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FiChevronsDown } from 'react-icons/fi'
-import { MdComputer, MdDocumentScanner, MdHealthAndSafety, MdSupervisorAccount, MdSubscriptions, MdLocalHospital, MdChevronRight, MdOutlineEmail, MdFileCopy } from "react-icons/md";
-import {GiBrazil} from 'react-icons/gi'
+import { MdComputer, MdDocumentScanner, MdHealthAndSafety, MdSupervisorAccount, MdSubscriptions, MdLocalHospital, MdChevronRight, MdOutlineEmail, MdFileCopy, MdPhone, MdGpsFixed, MdDomain } from "react-icons/md";
+import { GiBrazil } from 'react-icons/gi'
 
 
 import { Link } from 'react-scroll'
@@ -51,11 +51,11 @@ export default function Home() {
         <Flex marginTop={24} justifyContent={isLargerThan1000 ? 'space-between' : 'center'} alignItems='center'>
           <Stack textAlign={isLargerThan1000 ? 'initial' : 'center'} spacing={isLargerThan1000 ? 12 : 4} width={isLargerThan1000 ? '50%' : '100%'}>
             <Box >
-              <Heading size={['xl', '2xl' ,'2xl']}>
+              <Heading size={['xl', '2xl', '2xl']}>
                 Diga olá 👋🏽,
               </Heading>
-              <Heading size={['xl', '2xl' ,'2xl']}>
-                para um novo jeito de aprender sobre <Heading size={['xl', '2xl' ,'2xl']} id='gradientText'>segurança no trabalho</Heading>
+              <Heading size={['xl', '2xl', '2xl']}>
+                para um novo jeito de aprender sobre <Heading size={['xl', '2xl', '2xl']} id='gradientText'>segurança no trabalho</Heading>
               </Heading>
             </Box>
             <Text fontSize='xl' maxWidth={isLargerThan1000 ? '75%' : '100%'} textColor={'text'}>
@@ -63,10 +63,10 @@ export default function Home() {
             </Text>
             <Stack justifyContent={isLargerThan1000 ? 'initial' : 'center'} direction='row' spacing={4}>
               <CTAButton height={12} />
-              <ButtonMotion onClick={goToWpp} whileHover={{scale: 1.05}} _hover={{textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)'}} height={12} borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Contate-nos</ButtonMotion>
+              <ButtonMotion onClick={goToWpp} whileHover={{ scale: 1.05 }} _hover={{ textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)' }} height={12} borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Contate-nos</ButtonMotion>
             </Stack>
             <Link offset={-24} to='products' smooth>
-              <StackMotion justifyContent={isLargerThan1000 ? 'initial' : 'center'}  cursor='pointer' animate={{ y: [0, -2, 2, 0] }} transition={{ type: "spring", stiffness: 100, delay: 0.2, duration: 1, repeat: Infinity }} direction='row' alignItems='center'>
+              <StackMotion justifyContent={isLargerThan1000 ? 'initial' : 'center'} cursor='pointer' animate={{ y: [0, -2, 2, 0] }} transition={{ type: "spring", stiffness: 100, delay: 0.2, duration: 1, repeat: Infinity }} direction='row' alignItems='center'>
                 <FiChevronsDown size={24} color='#FF595E' />
                 <Text textColor='red.500'>Role para baixo para saber mais</Text>
               </StackMotion>
@@ -86,37 +86,37 @@ export default function Home() {
         </Flex>
         <Stack spacing={12} width='100%' alignItems={isLargerThan1000 ? 'initial' : 'center'}>
           <Stack width='100%' spacing={4} alignItems='center'>
-          <Stack spacing={4} direction='row'>
-            <MdSubscriptions size={24} color='#6A4C93' />
-            <MdLocalHospital size={24} color='#8AC926' />
-            <MdFileCopy size={24} color='#1982C4' />
+            <Stack spacing={4} direction='row'>
+              <MdSubscriptions size={24} color='#6A4C93' />
+              <MdLocalHospital size={24} color='#8AC926' />
+              <MdFileCopy size={24} color='#1982C4' />
+            </Stack>
+            <Heading textAlign={isLargerThan1000 ? 'initial' : 'center'}>O que nós oferecemos?</Heading>
+            <Text textAlign='center' fontSize='xl' maxWidth={isLargerThan1000 ? '50%' : '90%'} textColor={'text'}>
+              Nós cuidamos de tudo para oferecer a você o melhor dos conteúdos sobre segurança no trabalho
+            </Text>
           </Stack>
-          <Heading textAlign={isLargerThan1000 ? 'initial' : 'center'}>O que nós oferecemos?</Heading>
-          <Text textAlign='center' fontSize='xl' maxWidth={isLargerThan1000 ? '50%' : '90%'} textColor={'text'}>
-            Nós cuidamos de tudo para oferecer a você o melhor dos conteúdos sobre segurança no trabalho
-          </Text>
-          </Stack>
-          <Stack direction={isLargerThan1000? 'row' : 'column'} spacing={8}>
-            <Stack justifyContent='end' width={isLargerThan1000 ? 2/3 : '100%'} shadow='xl' borderRadius={8} spacing={4} padding={12}>
-              <MdSubscriptions color="#6A4C93" size={36}/>
+          <Stack direction={isLargerThan1000 ? 'row' : 'column'} spacing={8}>
+            <Stack justifyContent='end' width={isLargerThan1000 ? 2 / 3 : '100%'} shadow='xl' borderRadius={8} spacing={4} padding={12}>
+              <MdSubscriptions color="#6A4C93" size={36} />
               <Heading textColor='purple.500'>iSafety Treinamentos</Heading>
               <Text>
                 Tem como objetivo promover um ambiente de trabalho seguro e eficiente por meio de treinamentos de alta qualidade. Oferecemos uma ampla variedade de treinamentos para atender as suas necessidades de segurança do trabalho com a garantia de um serviço de excelência. Contamos com treinamentos na modalidade EAD e IN COMPANY.
               </Text>
-              <Button  variant='outline' colorScheme={'purple'} justifyContent='space-between' size='md' width='100%'>Acessar agora <MdChevronRight size={18}/></Button>
+              <Button variant='outline' colorScheme={'purple'} justifyContent='space-between' size='md' width='100%'>Acessar agora <MdChevronRight size={18} /></Button>
             </Stack>
-            <Stack borderWidth={1} borderColor='green.500' justifyContent='end' width={isLargerThan1000 ? 1/3 : '100%'} borderRadius={8} spacing={4} padding={12}>
-              <MdLocalHospital size={36} color={'#8AC926'}/>
+            <Stack borderWidth={1} borderColor='green.500' justifyContent='end' width={isLargerThan1000 ? 1 / 3 : '100%'} borderRadius={8} spacing={4} padding={12}>
+              <MdLocalHospital size={36} color={'#8AC926'} />
               <Heading textColor='green.500'>iSafety Vida</Heading>
               <Text>
-              Tem como objetivo promover qualidade de vida nos locais de trabalho, tornando o ambiente mais seguro e agradável. 
+                Tem como objetivo promover qualidade de vida nos locais de trabalho, tornando o ambiente mais seguro e agradável.
               </Text>
             </Stack>
-            <Stack justifyContent='end' borderWidth={1} borderColor='blue.500' width={isLargerThan1000 ? 1/3 : '100%'} borderRadius={8} spacing={4} padding={12}>
-              <MdFileCopy color="#1982C4" size={36}/>
+            <Stack justifyContent='end' borderWidth={1} borderColor='blue.500' width={isLargerThan1000 ? 1 / 3 : '100%'} borderRadius={8} spacing={4} padding={12}>
+              <MdFileCopy color="#1982C4" size={36} />
               <Heading textColor='blue.500'>iSafety Documentação</Heading>
               <Text>
-              Tem como objetivo desenvolver documentações de acordo com a legislação pertinente, a fim de auxiliar a empresa a tornar o ambiente de trabalho seguro.
+                Tem como objetivo desenvolver documentações de acordo com a legislação pertinente, a fim de auxiliar a empresa a tornar o ambiente de trabalho seguro.
               </Text>
             </Stack>
           </Stack>
@@ -125,40 +125,51 @@ export default function Home() {
           <Stack spacing={4} width={isLargerThan1000 ? '60%' : '100%'}>
             <Heading>Quem somos?</Heading>
             <Text textColor={'text'}>
-            O Grupo Isafety é uma empresa especializada em Segurança do Trabalho e Qualidade de Vida. Aqui na Isafety oferecemos uma ampla variedade de serviços de modo a atender as necessidades em matéria de segurança do trabalho, com a garantia de um serviço de excelência. Nossos serviços englobam toda a parte de Engenharia de Segurança do trabalho prevista nas normas regulamentadores NRs. Desde treinamentos, documentações e qualidade de vida nos locais de trabalho.
+              O Grupo Isafety é uma empresa especializada em Segurança do Trabalho e Qualidade de Vida. Aqui na Isafety oferecemos uma ampla variedade de serviços de modo a atender as necessidades em matéria de segurança do trabalho, com a garantia de um serviço de excelência. Nossos serviços englobam toda a parte de Engenharia de Segurança do trabalho prevista nas normas regulamentadores NRs. Desde treinamentos, documentações e qualidade de vida nos locais de trabalho.
             </Text>
             <Stack >
-                <Heading size='md'>Missão</Heading>
-                <Text textColor='text' fontSize={['sm', 'md', 'lg']}>
-                  Gerar valor para os nossos colaboradores, clientes e sociedade por meio de serviços de excelência, propondo soluções inovadoras e criativas para que possam desfrutar do mais alto nível de segurança do trabalho e qualidade de vida.
-                </Text>
-              </Stack>
-              <Stack>
-                <Heading size='md'>Visão</Heading>
-                <Text textColor='text' fontSize={['sm', 'md', 'lg']}>
-                  Ser empresa referência em matéria de Segurança do Trabalho, por meio de práticas e métodos eficientes e inovadores.
-                </Text>
-              </Stack>
+              <Heading size='md'>Missão</Heading>
+              <Text textColor='text' fontSize={['sm', 'md', 'lg']}>
+                Gerar valor para os nossos colaboradores, clientes e sociedade por meio de serviços de excelência, propondo soluções inovadoras e criativas para que possam desfrutar do mais alto nível de segurança do trabalho e qualidade de vida.
+              </Text>
+            </Stack>
+            <Stack>
+              <Heading size='md'>Visão</Heading>
+              <Text textColor='text' fontSize={['sm', 'md', 'lg']}>
+                Ser empresa referência em matéria de Segurança do Trabalho, por meio de práticas e métodos eficientes e inovadores.
+              </Text>
+            </Stack>
             <Values />
           </Stack>
-          <Image alt="logo_about" src={logo_about}/>
+          <Image alt="logo_about" src={logo_about} />
         </Flex>
         <Stack marginTop={24} spacing={8} width='100%' alignItems={'center'} justifyContent='center'>
-            <Heading textAlign='center' width={['100%', '90%' ,'40%']}><Heading id='gradientText'>Esteja seguro</Heading> com seu conhecimento</Heading>
-            <CTAButton height={12}/>
+          <Heading textAlign='center' width={['100%', '90%', '40%']}><Heading id='gradientText'>Esteja seguro</Heading> com seu conhecimento</Heading>
+          <CTAButton height={12} />
         </Stack>
-        <Flex paddingY={12} marginBottom={12} justifyContent='space-between' width='100%' alignItems='center'>
-          <Text textColor='text' fontSize={['xs', 'md', 'md']}>
-            © todos os direitos reservados 2023
-          </Text>
-          <Stack direction='row' spacing={4}>
-            {/* <IconButton variant='outline' colorScheme='red' aria-label="instagram" color={'red.500'} icon={<FaInstagram size={20} />} /> */}
-            <IconButton onClick={goToEmail} variant='outline' colorScheme='red' aria-label="instagram" color={'red.500'} icon={<MdOutlineEmail size={24} />} />
-          </Stack>
+        <Flex paddingY={24} justifyContent='center' width='100%' alignItems='center'>
+          <SimpleGrid columns={[1, 2, 2]} spacingX={4} spacingY={4}>
+            {/* <Stack direction='row' alignItems='center' spacing={2}>
+              <MdDomain size={'24'} color='black' />
+              <Text>00.000.000/00001-00</Text>
+            </Stack> */}
+            <StackMotion cursor='pointer' whileHover={{scale: 1.05, borderWidth: 1, borderColor: 'black', padding: 4, borderRadius: 48}} direction='row' alignItems='center' spacing={2}>
+              <MdOutlineEmail size={'24'} color='black' />
+              <Text>comercial@grupoisafety.com.br</Text>
+            </StackMotion>
+            <Stack direction='row' alignItems='center' spacing={2}>
+              <MdPhone size={'24'} color='black' />
+              <Text>(61) 8189-4455</Text>
+            </Stack>
+            {/* <Stack direction='row' alignItems='center' spacing={2}>
+              <MdGpsFixed size={'24'} color='black' />
+              <Text>(61) 8189-4455</Text>
+            </Stack> */}
+          </SimpleGrid>
         </Flex>
       </Box>
-      <FlexMotion onClick={goToWpp} whileHover={{scale: 1.1, backgroundColor: '#25d366'}} zIndex={1000} cursor='pointer' position='fixed' backgroundColor='white' alignItems='center' justifyContent='center' borderRadius='full' shadow='lg' right={10} bottom={10} width={16} height={16}>
-        <FaWhatsapp color="black" size={24}/>
+      <FlexMotion onClick={goToWpp} whileHover={{ scale: 1.1, backgroundColor: '#25d366' }} zIndex={1000} cursor='pointer' position='fixed' backgroundColor='white' alignItems='center' justifyContent='center' borderRadius='full' shadow='lg' right={10} bottom={10} width={16} height={16}>
+        <FaWhatsapp color="black" size={24} />
       </FlexMotion>
     </>
   )
