@@ -148,24 +148,16 @@ export default function Home() {
           <CTAButton height={12} />
         </Stack>
         <Flex paddingY={24} justifyContent='center' width='100%' alignItems='center'>
-          <SimpleGrid columns={[1, 2, 2]} spacingX={4} spacingY={4}>
-            {/* <Stack direction='row' alignItems='center' spacing={2}>
-              <MdDomain size={'24'} color='black' />
-              <Text>00.000.000/00001-00</Text>
-            </Stack> */}
-            <StackMotion cursor='pointer' whileHover={{scale: 1.05, borderWidth: 1, borderColor: 'black', padding: 4, borderRadius: 48}} direction='row' alignItems='center' spacing={2}>
+          <Stack spacing={4} direction={['column', 'column', 'row']}>
+            <StackMotion onClick={goToEmail} cursor='pointer' whileHover={{scale: 1.05, borderWidth: 1, borderColor: 'black', padding: 4, borderRadius: 48}} direction='row' alignItems='center' spacing={2}>
               <MdOutlineEmail size={'24'} color='black' />
               <Text>comercial@grupoisafety.com.br</Text>
             </StackMotion>
-            <Stack direction='row' alignItems='center' spacing={2}>
-              <MdPhone size={'24'} color='black' />
+            <StackMotion onClick={goToWpp} cursor='pointer' whileHover={{scale: 1.05, borderWidth: 1, borderColor: 'black', padding: 4, borderRadius: 48}} direction='row' alignItems='center' spacing={2}>
+            <MdPhone size={'24'} color='black' />
               <Text>(61) 8189-4455</Text>
-            </Stack>
-            {/* <Stack direction='row' alignItems='center' spacing={2}>
-              <MdGpsFixed size={'24'} color='black' />
-              <Text>(61) 8189-4455</Text>
-            </Stack> */}
-          </SimpleGrid>
+            </StackMotion>
+          </Stack>
         </Flex>
       </Box>
       <FlexMotion onClick={goToWpp} whileHover={{ scale: 1.1, backgroundColor: '#25d366' }} zIndex={1000} cursor='pointer' position='fixed' backgroundColor='white' alignItems='center' justifyContent='center' borderRadius='full' shadow='lg' right={10} bottom={10} width={16} height={16}>
