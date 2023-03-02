@@ -155,7 +155,7 @@ export default function Home() {
             </StackMotion>
             <StackMotion onClick={goToWpp} cursor='pointer' whileHover={{scale: 1.05, borderWidth: 1, borderColor: 'black', padding: 4, borderRadius: 48}} direction='row' alignItems='center' spacing={2}>
             <MdPhone size={'24'} color='black' />
-              <Text>(61) 8189-4455</Text>
+              <Text>(61) 9 8189-4455</Text>
             </StackMotion>
           </Stack>
         </Flex>
