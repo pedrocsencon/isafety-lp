@@ -2,10 +2,10 @@ import BulletItem from "@/components/BulletItem";
 import TopBar from "@/components/TopBar";
 import Values from "@/components/Values";
 
-import { Box, Button, Flex, Heading, IconButton, SimpleGrid, Stack, Text, useMediaQuery } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, SimpleGrid, Stack, Text, useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { FiChevronsDown } from 'react-icons/fi'
 import { MdComputer, MdDocumentScanner, MdHealthAndSafety, MdSupervisorAccount, MdSubscriptions, MdLocalHospital, MdChevronRight, MdOutlineEmail, MdFileCopy, MdPhone, MdGpsFixed, MdDomain } from "react-icons/md";
 import { GiBrazil } from 'react-icons/gi'
@@ -40,6 +40,7 @@ export default function Home() {
         <meta name="copyright" content="© 2023 iSafety" />
         <meta name="generator" content="Next.JS" />
         <meta name="rating" content="general" />
+        <meta name="google-site-verification" content="2XjcVEA6YGc75W2NoemfDvNR42kEn8gGF5jbztZG6zM" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='anonymous' />
@@ -55,7 +56,7 @@ export default function Home() {
                 Diga olá 👋🏽,
               </Heading>
               <Heading size={['xl', '2xl', '2xl']}>
-                para um novo jeito de aprender sobre <Heading size={['xl', '2xl', '2xl']} id='gradientText'>segurança no trabalho</Heading>
+                para um novo jeito de aprender sobre <Heading size={['xl', '2xl', '2xl']} id='gradientText2'>segurança no trabalho</Heading>
               </Heading>
             </Box>
             <Text fontSize='xl' maxWidth={isLargerThan1000 ? '75%' : '100%'} textColor={'text'}>

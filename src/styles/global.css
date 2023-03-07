@@ -1,10 +1,17 @@
 
-    #gradientText {
-        background: -webkit-linear-gradient(50deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        padding-bottom: 8px;
-      }
+#gradientText {
+    background: -webkit-linear-gradient(50deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 8px;
+  }
+
+  #gradientText2 {
+    background: -webkit-linear-gradient(50deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 8px;
+  }
 
   #testbutton {
     border-radius: 8px;    
