@@ -17,7 +17,7 @@ import Head from "next/head";
 import CTAButton from "@/components/CTAButton";
 import illustration from '../assets/illustration.svg'
 import logo_about from '../assets/logo_about.svg'
-import { goToEmail, goToWpp } from "@/utils";
+import { goTo, goToEmail, goToWpp } from "@/utils";
 
 export default function Home() {
   const StackMotion = motion(Stack)
@@ -103,7 +103,7 @@ export default function Home() {
               <Text>
                 Tem como objetivo promover um ambiente de trabalho seguro e eficiente por meio de treinamentos de alta qualidade. Oferecemos uma ampla variedade de treinamentos para atender as suas necessidades de segurança do trabalho com a garantia de um serviço de excelência. Contamos com treinamentos na modalidade EAD e IN COMPANY.
               </Text>
-              <Button variant='outline' colorScheme={'purple'} justifyContent='space-between' size='md' width='100%'>Acessar agora <MdChevronRight size={18} /></Button>
+              <Button variant='outline' onClick={goTo} colorScheme={'purple'} justifyContent='space-between' size='md' width='100%'>Acessar agora <MdChevronRight size={18} /></Button>
             </Stack>
             <Stack borderWidth={1} borderColor='green.500' justifyContent='end' width={isLargerThan1000 ? 1 / 3 : '100%'} borderRadius={8} spacing={4} padding={12}>
               <MdLocalHospital size={36} color={'#8AC926'} />
