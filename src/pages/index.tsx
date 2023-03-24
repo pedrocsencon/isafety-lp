@@ -11,7 +11,7 @@ import { MdComputer, MdDocumentScanner, MdHealthAndSafety, MdSupervisorAccount, 
 import { GiBrazil } from 'react-icons/gi'
 
 
-import { Link } from 'react-scroll'
+import { Link, scroller } from 'react-scroll'
 import Head from "next/head";
 
 import CTAButton from "@/components/CTAButton";
@@ -103,7 +103,10 @@ export default function Home() {
               <Text>
                 Tem como objetivo promover um ambiente de trabalho seguro e eficiente por meio de treinamentos de alta qualidade. Oferecemos uma ampla variedade de treinamentos para atender as suas necessidades de segurança do trabalho com a garantia de um serviço de excelência. Contamos com treinamentos na modalidade EAD e IN COMPANY.
               </Text>
-              <Button variant='outline' onClick={goTo} colorScheme={'purple'} justifyContent='space-between' size='md' width='100%'>Acessar agora <MdChevronRight size={18} /></Button>
+              <ButtonMotion onClick={goTo} whileHover={{ scale: 1.02 }} _hover={{ textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)' }} height={12} justifyContent='space-between' borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Para pessoas físicas <MdChevronRight size={18} /></ButtonMotion>
+            <ButtonMotion onClick={()=>{scroller.scrollTo('empresa', {
+              smooth: true,
+            })}} whileHover={{ scale: 1.02 }} _hover={{ textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)' }} height={12} justifyContent='space-between' borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Para empresas <MdChevronRight size={18} /></ButtonMotion>
             </Stack>
             <Stack borderWidth={1} borderColor='green.500' justifyContent='end' width={isLargerThan1000 ? 1 / 3 : '100%'} borderRadius={8} spacing={4} padding={12}>
               <MdLocalHospital size={36} color={'#8AC926'} />
@@ -143,9 +146,15 @@ export default function Home() {
           </Stack>
           <Image alt="logo_about" src={logo_about} />
         </Flex>
-        <Stack marginTop={24} spacing={8} width='100%' alignItems={'center'} justifyContent='center'>
-          <Heading textAlign='center' width={['100%', '90%', '40%']}><Heading id='gradientText'>Esteja seguro</Heading> com seu conhecimento</Heading>
-          <CTAButton height={12} />
+        <Stack id='empresa' marginTop={24} spacing={8} width='100%' alignItems={'center'} justifyContent='center'>
+          <Heading textAlign='center' width={['100%', '90%', '40%']}><Heading id='gradientText'>Sua empresa</Heading> com maior segurança</Heading>
+         <Stack textAlign='center' width={['100%', '90%', '30%']}>
+           <Text >Obtenha mais informações sobre nossos produtos focados para empresas.</Text>
+          <Text>
+          Fale conosco clicando no botão abaixo
+          </Text>
+         </Stack>
+         <ButtonMotion onClick={goToWpp} whileHover={{ scale: 1.02 }} _hover={{ textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)' }} height={12} justifyContent='space-between' borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Entrar em contato</ButtonMotion>
         </Stack>
         <Flex paddingY={24} justifyContent='center' width='100%' alignItems='center'>
           <Stack spacing={4} direction={['column', 'column', 'row']}>
