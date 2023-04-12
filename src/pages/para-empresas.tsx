@@ -28,8 +28,8 @@ export default function ForCompany() {
       </Head>
       <TopBar />
       <Box width='100%' >
-        <Stack spacing={4} paddingTop={36} paddingBottom={24} bgGradient={`linear-gradient(60deg,  ${colors[Math.floor(Math.random()*colors.length)]}, ${colors[Math.floor(Math.random()*colors.length)]}, ${colors[Math.floor(Math.random()*colors.length)]})`} textAlign='center' alignItems='center' paddingX={56} justifyContent='center' width='100%' >
-          <Heading size='2xl'>
+        <Stack spacing={4} paddingTop={36} paddingBottom={24} bgGradient={`linear-gradient(60deg,  ${colors[Math.floor(Math.random()*colors.length)]}, ${colors[Math.floor(Math.random()*colors.length)]}, ${colors[Math.floor(Math.random()*colors.length)]})`} textAlign='center' alignItems='center' paddingX={[4, 12, 56]} justifyContent='center' width='100%' >
+          <Heading size={['lg', 'xl', '2xl']}>
             Certifique seus colaboradores com alto nível de conhecimento por meio da empresa referência em treinamentos, com instrutores de alto nível.
           </Heading>
         </Stack>
@@ -37,14 +37,14 @@ export default function ForCompany() {
           <Heading>
           Nossos cursos
           </Heading>
-          <Text marginTop={4} fontSize={'xl'} width='80%'>
+          <Text marginTop={4} fontSize={'xl'} width={['100%', '90%', '80%']}>
             A Isafety conta com os melhores treinamentos com validade e reconhecimento em todo território nacional.
           </Text>
           <Divider marginY={12} borderColor={'gray.300'}/>
-          <Text marginTop={4} fontWeight='bold' fontSize={'2xl'} width='80%'>
+          <Text marginTop={4} fontWeight='bold' fontSize={'2xl'} width='100%'>
             Cursos mais vendidos
           </Text>
-          <SimpleGrid marginTop={4} spacing={4} columns={5}>
+          <SimpleGrid marginTop={4} spacing={4} columns={[1, 2, 3, 4, 5]}>
             {COMPANY_COURSES.map(renderItem)}
           </SimpleGrid>
         </Box>
