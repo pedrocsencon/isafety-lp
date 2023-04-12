@@ -40,11 +40,6 @@ export default function Home() {
         <meta name="copyright" content="© 2023 iSafety" />
         <meta name="generator" content="Next.JS" />
         <meta name="rating" content="general" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='anonymous' />
-        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet" />
-
       </Head>
       <TopBar />
       <Box width='100%' paddingX={isLargerThan1000 ? 12 : 8} backgroundColor={'white'}>
