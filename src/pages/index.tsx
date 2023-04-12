@@ -18,10 +18,10 @@ import CTAButton from "@/components/CTAButton";
 import illustration from '../assets/illustration.svg'
 import logo_about from '../assets/logo_about.svg'
 import { goTo, goToEmail, goToWpp } from "@/utils";
+import FloatWppButton from "@/components/FloatWppButton";
 
 export default function Home() {
   const StackMotion = motion(Stack)
-  const FlexMotion = motion(Flex)
   const ButtonMotion = motion(Button)
   const [isLargerThan1000] = useMediaQuery('(min-width: 1000px)')
 
@@ -164,9 +164,7 @@ export default function Home() {
           </Stack>
         </Flex>
       </Box>
-      <FlexMotion onClick={goToWpp} whileHover={{ scale: 1.1, backgroundColor: '#25d366' }} zIndex={1000} cursor='pointer' position='fixed' backgroundColor='white' alignItems='center' justifyContent='center' borderRadius='full' shadow='lg' right={10} bottom={10} width={16} height={16}>
-        <FaWhatsapp color="black" size={24} />
-      </FlexMotion>
+     <FloatWppButton/>
     </>
   )
 }

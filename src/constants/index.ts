@@ -1,12 +1,17 @@
 import { CompanyCoursesInfo, PeopleCoursesInfo } from "./types";
 
-export const CompanyCourses: CompanyCoursesInfo[] = [
+export const colors = [
+    `#FFCA3A20`, `#FF595E20`, `#6A4C9350`, `#1982C420`, `#8AC92620`
+]
+
+export const COMPANY_COURSES: CompanyCoursesInfo[] = [
     {
        title: 'NR 6 –EPI – Equipamento de Proteção Individual',
        subtitle: 'Utilização, guarda e conservação (inicial e Reciclagem)',
        availability: 2,
        description: 'Este treinamento é ideal para colaboradoes e empresas que envolva qualquer atividade que possua algum tipo de risco físico necessário a utilização do equipamento de proteção individual (EPI). Esses equipamentos são indispensáveis afim de preservar a saúde física do colaborador. ',
        horary: '4 horas',
+       urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2021/02/Nr6.jpg',
     },
     {
         title: 'NR 10 - Segurança em Instalações e Serviços de Eletricidade',
@@ -14,6 +19,7 @@ export const CompanyCourses: CompanyCoursesInfo[] = [
         availability: 2,
         description: 'Treinamento que tem por objetivo a capacitação e a qualificação do trabalhador que irá atuar com segurança em instalações elétricas e serviços com eletricidade. Deixando apto para o trabalho e regulamentado conforme as exigências do ministério do trabalho.',
         horary: '4 horas a 40 horas, depedendendo do curso',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2020/12/Nr10.jpg',
      },
      {
         title: 'NR 11 – Operador de Empilhadeira',
@@ -21,6 +27,7 @@ export const CompanyCourses: CompanyCoursesInfo[] = [
         availability: 2,
         description: 'O curso de NR 11 é fundamental para todos os profissionais que irão atuar com empilhadeira em diversos seguimentos de carga e descarga de materiais, empilhamento por processo mecanizado, que além de capacitar, instrui sobe o gerenciamento de riscos dos colaboradores. Deixando apto para o trabalho e regulamentado conforme as normativas do ministério do trabalho exigem.',
         horary: '16 horas',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2020/12/Copia-de-Artes-Formaseg-1.png'
      },
      {
         title: 'NR 11 – Operador de Máquinas Agrícolas e Equipamentos',
@@ -28,6 +35,8 @@ export const CompanyCourses: CompanyCoursesInfo[] = [
         availability: 2,
         description: 'Operador de máquinas agrícolas e equipamentos, tem o objetivo de instruir e capacitar pessoas que necessitem operar máquinas agrícolas de forma segura, com eficácia e respeitando as normas do TEM, para a sua proteção, dos seus colegas de trabalho de visitantes e da empresa',
         horary: '16 horas',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2020/12/Copia-de-Artes-Formaseg-1.png'
+
      },
      {
         title: 'NR 11 – Operador de Muque',
@@ -35,6 +44,7 @@ export const CompanyCourses: CompanyCoursesInfo[] = [
         availability: 2,
         description: 'O curso é fundamental para todos os profissionais que irão atuar com caminhão muque em diversos seguimentos de carga e descarga de materiais, empilhamento por processo mecanizado, que além de capacitar, instrui sobre o gerenciamento de riscos dos colaboradores. Deixando apto para o trabalho e regulamentado conforme as normativas do ministério do trabalho exigem.',
         horary: '8 horas',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2020/12/Copia-de-Artes-Formaseg-1.png'
      },
      {
         title: 'NR 11 – Operador de Ponte Rolante e Talha',
@@ -42,6 +52,7 @@ export const CompanyCourses: CompanyCoursesInfo[] = [
         availability: 2,
         description: 'Tem como objetivo qualificar e aprimorar os conhecimentos do profissional que a opera, como funciona, manutenção, técnicas de correto manuseio da máquina e possibilitar noções sobre a legislação e suas atribuições no local de trabalho. Deixando apto para o trabalho e regulamentado conforme as exigências do ministério do trabalho.',
         horary: '16 horas',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2020/12/Copia-de-Artes-Formaseg-1.png'
      },
      {
         title: 'NR 11 – Operador de Hilo Tombador',
@@ -49,6 +60,7 @@ export const CompanyCourses: CompanyCoursesInfo[] = [
         availability: 2,
         description: 'O curso de capacitação para operador de Hilo Tombador, tem o objetivo de instruir e capacitar profissionais para estarem aptos a operar com segurança, equipamento responsável por meio de tração, pela elevação de cargas e materiais de difícil locomoção, como é o caso do Hilo Tombador. Deixando apto para o trabalho e regulamentado conforme as exigências do ministério do trabalho.',
         horary: '5 horas',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2020/12/Copia-de-Artes-Formaseg-1.png'
      },
 
      {
@@ -57,6 +69,7 @@ export const CompanyCourses: CompanyCoursesInfo[] = [
         availability: 2,
         description: 'O curso de NR 12 é destinado a operadores de máquinas e equipamentos. Tem como objetivo capacitar o profissional para identificar fatores de risco e utilizar as melhores práticas para a prevenção de acidentes no uso de seus instrumentos de trabalho. Deixando apto para o trabalho e regulamentado conforme as exigências do ministério do trabalho.',
         horary: '2 horas',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2021/02/Nr12.jpg'
      },
 
 
@@ -66,6 +79,7 @@ export const CompanyCourses: CompanyCoursesInfo[] = [
         availability: 2,
         description: 'Esta norma regulamentadora visa estabelecer parâmetros que permitam a adaptação das condições de trabalho as características psicofisiológicas dos trabalhadores, proporcionando o máximo de conforto segurança e desempenho eficiente aos colaboradores.',
         horary: '2 ou 4 horas a depender do curso',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2021/09/WhatsApp-Image-2021-07-28-at-13.15.15-1.jpeg'
      },
 
      {
@@ -73,53 +87,60 @@ export const CompanyCourses: CompanyCoursesInfo[] = [
         subtitle: 'Inicial e Reciclagem',
         availability: 2,
         description: 'Esta norma regulamentadora é destinada a trabalhadores da construção civil e aborda os riscos e medidas necessárias nas condições e no meio ambiente de trabalho na indústria da construção.',
-        horary: '4 ou 16 horas a depender do curso'
+        horary: '4 ou 16 horas a depender do curso',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2021/09/Nr18-1.jpg'
      },
      {
         title: 'NR 20 – Inflamáveis e Combustíveis',
         subtitle: 'Classe I,II e III – Iniciação, Básico, intermediário e avançado',
         availability: 2,
         description: 'Esta norma regulamentadora tem como objetivo capacitar profissional com requisitos mínimos para a gestão de segurança do trabalho contra fatores de risco de acidentes provenientes das atividades de produtos inflamáveis. Deixando apto para o trabalho e regulamentado conforme as exigências do ministério do trabalho. ',
-        horary: '16 ou 32 horas a depender do curso'
+        horary: '16 ou 32 horas a depender do curso',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2021/10/joao-5.png'
      },
      {
         title: 'NR 23 – Proteção e Combate a Incêndio',
         subtitle: 'Proteção contra incêndios no ambiente de trabalho',
         availability: 2,
         description: 'Esta norma regulamentadora é destinado a profissionais para conhecer os conceitos e aprimorar seus conhecimentos sobre a área de combate dos princípios de incêndios. ',
-        horary: '16 horas'
+        horary: '16 horas',
+        urlImage:'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2020/12/085c09d7b5324a6bb72e40b8078f8e6c.jpeg'
      },
      {
         title: 'Primeiros Socorros',
         subtitle: 'Bombeiros, brigadistas, etc',
         availability: 2,
         description: 'O Treinamento de Primeiros Socorros aborda todo conteúdo sobre as técnicas de primeiros socorros e o conjunto de medidas de prevenção, para ser aplicado em casos de necessidade.',
-        horary: '10 horas'
+        horary: '10 horas',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2020/12/9c74dbd9b79f45b99b51065707428f87.jpeg'
      },
      {
         title: 'Direção Defensiva',
         subtitle: 'Veículos Leves e Pesados',
         availability: 2,
         description: 'O Curso de Direção Defensiva aborda todo conteúdo sobre as técnicas de direção defensiva e o conjunto de medidas de prevenção de acidentes no trânsito.',
-        horary: '6 horas'
+        horary: '6 horas',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2021/02/Copia-de-Artes-Formaseg-8.png',
      },
      {
         title: 'Nr 33 – Segurança e Saúde em Espaços Confinados',
         subtitle: 'Trabalhador autorizado, Vigia e Supervisor – Básico e reciclagem',
         availability: 2,
         description: 'Esta norma tem como objetivo estabelecer os requisitos mínimos para identificação de espaços confinados e o reconhecimento, avaliação, monitoramento e controle dos riscos existentes, de forma a garantir permanentemente a segurança dos trabalhadores que interagem direta ou indiretamente nestes espaços.',
-        horary: '8, 16 e 40 horas de conteúdo a depender do curso'
+        horary: '8, 16 e 40 horas de conteúdo a depender do curso',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2022/08/Nr-33-Supervisor.jpeg'
      },
      {
         title: 'Nr 35 - Trabalho em Altura',
         subtitle: 'Básico e Reciclagem ',
         availability: 2,
         description: 'Esta norma regulamentadora tem como objetivo capacitar o profissional para realizar trabalho em altura. Dentre elas envolve o planejamento, organização e execução da função, visa a segurança e a saúde dos trabalhadores envolvidos com atividades de risco de quedas. Deixando apto para o trabalho e regulamentado conforme as exigências no ministério do trabalho.',
-        horary: '4 e 8 horas de conteúdo a depender do curso'
+        horary: '4 e 8 horas de conteúdo a depender do curso',
+        urlImage: 'https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2021/02/Copia-de-Artes-Formaseg-21.png'
      },
     ]
 
-export const peopleCourses: PeopleCoursesInfo[] = [
+export const PEOPLE_COURSES: PeopleCoursesInfo[] = [
     {
         title: 'NR 5 – CIPA',
         subtitle: 'Formação de Cipeiros ( Grau de risco 1, 2, 3 e 4)',

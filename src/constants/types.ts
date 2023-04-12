@@ -9,6 +9,7 @@ export type CoursesInfo = {
     subtitle: string;
     description: string;
     horary: string;
+    urlImage: string
 }
 
 export type CompanyCoursesInfo = CoursesInfo & {
