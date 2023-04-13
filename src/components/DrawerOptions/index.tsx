@@ -22,6 +22,11 @@ export default function DrawerOptions() {
     const ButtonMotion = motion(Button)
     const navigation = useRouter();
 
+    const handleForYou = useCallback(() => {
+        navigation.push('/para-voce')
+      }, [])
+    
+
     const handleProducts = useCallback(() => {
         onClose()
         navigation.push('/para-empresas')
@@ -47,7 +52,7 @@ export default function DrawerOptions() {
                                 color: 'white',
                             }}
                             whileHover={{ scale: 1.05 }} variant="ghost"
-                            onClick={handleProducts}
+                            onClick={handleForYou}
                         >
                             Para você
                         </ButtonMotion>
@@ -59,7 +64,7 @@ export default function DrawerOptions() {
                             whileHover={{ scale: 1.05 }} variant="ghost"
                             onClick={handleProducts}
                         >
-                            Para empresas
+                            Para sua empresa
                         </ButtonMotion>
                         <ButtonMotion
                             onClick={goTo}

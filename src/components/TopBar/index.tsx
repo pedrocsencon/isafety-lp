@@ -18,6 +18,10 @@ export default function TopBar() {
     navigation.push('/para-empresas')
   }, [])
 
+  const handleForYou = useCallback(() => {
+    navigation.push('/para-voce')
+  }, [])
+
   const handleHome = useCallback(() => {
     navigation.push('/')
   }, [])
@@ -48,7 +52,7 @@ export default function TopBar() {
                 color: 'white',
               }}
               whileHover={{ scale: 1.05 }} variant="ghost"
-              onClick={handleProducts}
+              onClick={handleForYou}
             >
               Para você
             </ButtonMotion>
@@ -60,7 +64,7 @@ export default function TopBar() {
               whileHover={{ scale: 1.05 }} variant="ghost"
               onClick={handleProducts}
             >
-              Para empresas
+              Para sua empresa
             </ButtonMotion>
             <ButtonMotion
               onClick={goTo}

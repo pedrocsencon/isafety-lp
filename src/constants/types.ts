@@ -16,7 +16,7 @@ export type CompanyCoursesInfo = CoursesInfo & {
     availability: number;
 }
 
-export type PeopleCoursesInfo = CoursesInfo &{
+export type PeopleCoursesInfo = CoursesInfo & {
     price: string;
     link: string;
     avaliable: string
