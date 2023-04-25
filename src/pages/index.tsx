@@ -5,25 +5,35 @@ import Values from "@/components/Values";
 import { Box, Button, Flex, Heading, SimpleGrid, Stack, Text, useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaWhatsapp } from "react-icons/fa";
 import { FiChevronsDown } from 'react-icons/fi'
-import { MdComputer, MdDocumentScanner, MdHealthAndSafety, MdSupervisorAccount, MdSubscriptions, MdLocalHospital, MdChevronRight, MdOutlineEmail, MdFileCopy, MdPhone, MdGpsFixed, MdDomain } from "react-icons/md";
+import { MdComputer, MdDocumentScanner, MdHealthAndSafety, MdSupervisorAccount, MdSubscriptions, MdLocalHospital, MdChevronRight, MdOutlineEmail, MdFileCopy, MdPhone } from "react-icons/md";
 import { GiBrazil } from 'react-icons/gi'
 
 
-import { Link, scroller } from 'react-scroll'
+import { Link } from 'react-scroll'
 import Head from "next/head";
 
 import CTAButton from "@/components/CTAButton";
 import illustration from '../assets/illustration.svg'
 import logo_about from '../assets/logo_about.svg'
-import { goTo, goToEmail, goToWpp } from "@/utils";
+import { goToEmail, goToWpp } from "@/utils";
 import FloatWppButton from "@/components/FloatWppButton";
+import { useCallback } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const StackMotion = motion(Stack)
   const ButtonMotion = motion(Button)
   const [isLargerThan1000] = useMediaQuery('(min-width: 1000px)')
+  const navigation = useRouter();
+
+  const handleProducts = useCallback(() => {
+    navigation.push("/para-empresas");
+  }, []);
+
+  const handleForYou = useCallback(() => {
+    navigation.push("/para-voce");
+  }, []);
 
   return (
     <>
@@ -98,10 +108,8 @@ export default function Home() {
               <Text>
                 Tem como objetivo promover um ambiente de trabalho seguro e eficiente por meio de treinamentos de alta qualidade. Oferecemos uma ampla variedade de treinamentos para atender as suas necessidades de segurança do trabalho com a garantia de um serviço de excelência. Contamos com treinamentos na modalidade EAD e IN COMPANY.
               </Text>
-              <ButtonMotion onClick={goTo} whileHover={{ scale: 1.02 }} _hover={{ textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)' }} height={12} justifyContent='space-between' borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Para pessoas físicas <MdChevronRight size={18} /></ButtonMotion>
-            <ButtonMotion onClick={()=>{scroller.scrollTo('empresa', {
-              smooth: true,
-            })}} whileHover={{ scale: 1.02 }} _hover={{ textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)' }} height={12} justifyContent='space-between' borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Para empresas <MdChevronRight size={18} /></ButtonMotion>
+              <ButtonMotion onClick={handleForYou} whileHover={{ scale: 1.02 }} _hover={{ textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)' }} height={12} justifyContent='space-between' borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Para pessoas físicas <MdChevronRight size={18} /></ButtonMotion>
+            <ButtonMotion onClick={handleProducts} whileHover={{ scale: 1.02 }} _hover={{ textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)' }} height={12} justifyContent='space-between' borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Para empresas <MdChevronRight size={18} /></ButtonMotion>
             </Stack>
             <Stack borderWidth={1} borderColor='green.500' justifyContent='end' width={isLargerThan1000 ? 1 / 3 : '100%'} borderRadius={8} spacing={4} padding={12}>
               <MdLocalHospital size={36} color={'#8AC926'} />
