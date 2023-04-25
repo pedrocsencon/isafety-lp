@@ -19,10 +19,10 @@ export default function PeopleCourseItem({item, onOpen}: PeopleCoursesItemProps)
         }} justifyContent='space-between' height={'27rem'} padding={4} borderRadius={'lg'} shadow='md' bgColor='white'>
                <Stack spacing={4}>
                <Image  maxHeight={48} alt={item.title} src={item.urlImage}/>
-            <Text fontSize='sm' fontWeight='bold'>
+            <Text fontWeight='bold'>
                 {item.title}
             </Text>
-            <Text fontSize='xs'>
+            <Text  fontSize='sm'>
                 {item.subtitle}
             </Text>
                </Stack>
