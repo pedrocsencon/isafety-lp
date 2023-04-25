@@ -1,5 +1,19 @@
 import { goTo } from "@/utils";
-import { Box, Button, Flex, Stack, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+  Stack,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import logo from "../../assets/logo-full.svg";
@@ -11,20 +25,19 @@ import DrawerOptions from "../DrawerOptions";
 export default function TopBar() {
   const ButtonMotion = motion(Button);
   const navigation = useRouter();
-  const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
-
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
 
   const handleProducts = useCallback(() => {
-    navigation.push('/para-empresas')
-  }, [])
+    navigation.push("/para-empresas");
+  }, []);
 
   const handleForYou = useCallback(() => {
-    navigation.push('/para-voce')
-  }, [])
+    navigation.push("/para-voce");
+  }, []);
 
   const handleHome = useCallback(() => {
-    navigation.push('/')
-  }, [])
+    navigation.push("/");
+  }, []);
 
   return (
     <Flex
@@ -40,32 +53,20 @@ export default function TopBar() {
       borderBottomWidth={1}
       borderBottomColor="opacity"
     >
-      <Box cursor='pointer' onClick={handleHome}>
+      <Box cursor="pointer" onClick={handleHome}>
         <Image src={logo} alt="logo-alt" />
       </Box>
-      <Stack direction='row' spacing={8}>
-        {isLargerThan800 ?
+      <Stack direction="row" spacing={8}>
+        {isLargerThan800 ? (
           <>
-            <ButtonMotion
-              _hover={{
-                backgroundColor: 'blue.500',
-                color: 'white',
-              }}
-              whileHover={{ scale: 1.05 }} variant="ghost"
-              onClick={handleForYou}
-            >
-              Para você
-            </ButtonMotion>
-            <ButtonMotion
-              _hover={{
-                backgroundColor: 'red.500',
-                color: 'white',
-              }}
-              whileHover={{ scale: 1.05 }} variant="ghost"
-              onClick={handleProducts}
-            >
-              Para sua empresa
-            </ButtonMotion>
+            <Menu>
+              <MenuButton as={Button}>Nossos treinamentos</MenuButton>
+              <MenuList>
+                <MenuItem onClick={handleProducts}>Para sua empresa</MenuItem>
+                <MenuItem onClick={handleForYou}>Para você</MenuItem>
+              </MenuList>
+            </Menu>
+
             <ButtonMotion
               onClick={goTo}
               whileHover={{ scale: 1.05 }}
@@ -80,10 +81,9 @@ export default function TopBar() {
               Começar agora
             </ButtonMotion>
           </>
-          :
+        ) : (
           <DrawerOptions />
-        }
-
+        )}
       </Stack>
     </Flex>
   );

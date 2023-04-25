@@ -25,12 +25,6 @@ export default function PeopleCourseItem({item, onOpen}: PeopleCoursesItemProps)
             <Text fontSize='xs'>
                 {item.subtitle}
             </Text>
-            <HStack opacity={0.7}>
-                <FiClock />
-                <Text fontSize={'xs'}>
-                    {item.horary}
-                </Text>
-            </HStack>
                </Stack>
             <HStack padding={2} borderRadius={'lg'} bgColor={'opacity'} opacity={0.7} justify='space-between'>
                 <Text fontSize={'sm'}>

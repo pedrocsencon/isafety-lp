@@ -1,6 +1,6 @@
-import {  PeopleCoursesInfo } from "@/constants/types"
+import {  ListPeopleCourseItem } from "@/constants/types"
 
 export type PeopleCoursesItemProps = {
-    item: PeopleCoursesInfo,
-    onOpen: (item: PeopleCoursesInfo)=> void
+    item: ListPeopleCourseItem,
+    onOpen: (item: ListPeopleCourseItem)=> void
 }

@@ -21,3 +21,12 @@ export type PeopleCoursesInfo = CoursesInfo & {
     link: string;
     avaliable: string
 }
+
+export type ListPeopleCourseItem = {
+    title: string,
+    subtitle: string,
+    urlImage?: string,
+    courses: PeopleCoursesInfo[]
+}
+
+export type ListPeopleCourse = ListPeopleCourseItem[]

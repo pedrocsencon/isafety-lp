@@ -1,7 +1,7 @@
-import { PeopleCoursesInfo } from "@/constants/types"
+import { ListPeopleCourseItem, PeopleCoursesInfo } from "@/constants/types"
 
 export type ModalPeopleCoursesProps = {
-    item?: PeopleCoursesInfo,
+    item?: ListPeopleCourseItem,
     isOpen: boolean
     onClose: ()=> void
 }

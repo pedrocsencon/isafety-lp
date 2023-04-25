@@ -7,6 +7,7 @@ import { CompanyCoursesInfo } from "@/constants/types";
 import { Box, Divider, Heading, HStack, SimpleGrid, Stack, Text, useDisclosure, useMediaQuery } from "@chakra-ui/react";
 import Head from "next/head";
 import { useCallback, useState } from "react";
+import { FiBookOpen, FiFileText, FiPocket, FiVideo } from "react-icons/fi";
 
 export default function ForCompany() {
   const {onClose, isOpen, onOpen} = useDisclosure();
@@ -40,6 +41,32 @@ export default function ForCompany() {
           <Text marginTop={4} fontSize={'xl'} width={['100%', '90%', '80%']}>
             A Isafety conta com os melhores treinamentos com validade e reconhecimento em todo território nacional.
           </Text>
+          <SimpleGrid  columns={[1,2,2,4]}>
+            <Stack marginTop={8} height={72} textAlign='center' align='center' maxW={72} padding={12} borderRadius={'lg'} bgColor='white' shadow='md'>
+              <FiVideo fontSize={36} color="black"/>
+              <Text fontSize='lg' fontWeight='bold'>Vídeos didáticos</Text>
+              <Divider />
+              <Text>Vídeo aulas interativas ministradas por professores especialistas emm seus segmentos. </Text>
+            </Stack>
+            <Stack marginTop={8} height={72} textAlign='center' align='center' maxW={72} padding={12} borderRadius={'lg'} bgColor='white' shadow='md'>
+              <FiBookOpen fontSize={36} color="black"/>
+              <Text fontSize='lg' fontWeight='bold'>Material de leitura</Text>
+              <Divider />
+              <Text>Arquivos de leitura para complemento pedagógico.</Text>
+            </Stack>
+            <Stack marginTop={8} height={72} textAlign='center' align='center' maxW={72} padding={12} borderRadius={'lg'} bgColor='white' shadow='md'>
+              <FiPocket fontSize={36} color="black"/>
+              <Text fontSize='lg' fontWeight='bold'>Certificados automatizados</Text>
+              <Divider />
+              <Text>Com dados dos alunos conforme é estabelecido por Norma.</Text>
+            </Stack>
+            <Stack  marginTop={8} height={72} textAlign='center' align='center' maxW={72} padding={12} borderRadius={'lg'} bgColor='white' shadow='md'>
+              <FiFileText fontSize={36} color="black"/>
+              <Text fontSize='lg' fontWeight='bold'>Provas avaliativas</Text>
+              <Divider />
+              <Text>Provas avaliativas com intuito de comprovar o conhecimentos aquirido pelo aluno.</Text>
+            </Stack>
+          </SimpleGrid>
           <Divider marginY={12} borderColor={'gray.300'}/>
           <Text marginTop={4} fontWeight='bold' fontSize={'2xl'} width='100%'>
             Cursos mais vendidos para empresas
