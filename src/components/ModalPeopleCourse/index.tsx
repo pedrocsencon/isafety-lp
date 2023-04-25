@@ -28,7 +28,7 @@ export default function ModalPeopleCourse({
   onClose,
 }: ModalPeopleCoursesProps) {
   const handleOpenWpp = useCallback(() => {
-    if (item) {
+    if (item?.title) {
       goToWppCourse(item.title);
     }
   }, []);
@@ -72,7 +72,7 @@ export default function ModalPeopleCourse({
                   <Text>{course.description}</Text>
                   <HStack>
                     <Button onClick={()=>{ window.open(course.link, "_blank");}} colorScheme='blue'><Text >Comprar online</Text></Button>
-                    <Button  onClick={handleOpenWpp} colorScheme='whatsapp' variant='outline'><Text>Conversar conosco</Text></Button></HStack>
+                    <Button onClick={handleOpenWpp} colorScheme='whatsapp' variant='outline'><Text>Conversar conosco</Text></Button></HStack>
                 </Stack>
               )
             })}
