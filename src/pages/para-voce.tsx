@@ -73,7 +73,7 @@ export default function ForCompany() {
           <Text marginTop={4} fontWeight='bold' fontSize={'2xl'} width='100%'>
             Cursos mais vendidos para pessoas físicas
           </Text>
-          <SimpleGrid marginTop={4} spacing={4} columns={[1, 2, 3, 4, 5]}>
+          <SimpleGrid marginTop={4} spacing={4} columns={[1, 2, 3, 4]}>
             {PEOPLE_COURSES.map(renderItem)}
           </SimpleGrid>
         </Box>

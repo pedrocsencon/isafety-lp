@@ -7,7 +7,7 @@ export enum Availability {
 export type CoursesInfo = {
     title: string;
     subtitle: string;
-    description: string;
+    description?: string;
     horary: string;
     urlImage?: string
 }
@@ -26,6 +26,7 @@ export type ListPeopleCourseItem = {
     title: string,
     subtitle: string,
     urlImage?: string,
+    description?: string
     courses: PeopleCoursesInfo[]
 }
 

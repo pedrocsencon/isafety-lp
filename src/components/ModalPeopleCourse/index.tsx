@@ -14,6 +14,8 @@ import {
   Stack,
   Image,
   Flex,
+  SimpleGrid,
+  Divider,
 } from "@chakra-ui/react";
 import { useCallback } from "react";
 import { FaWhatsapp } from "react-icons/fa";
@@ -48,35 +50,76 @@ export default function ModalPeopleCourse({
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <Flex direction={['column', 'column', 'row']} textAlign={['center', 'center', 'initial']} borderRadius={'lg'} padding={8} bgColor='#6A4C9230' align='center' justify='center' width={'100%'}>
-            <Image src={item.urlImage} width={["sm", "sm", "lg"]} height='auto' borderRadius='md' />
+          <Flex
+            direction={["column", "column", "row"]}
+            textAlign={["center", "center", "initial"]}
+            borderRadius={"lg"}
+            padding={8}
+            bgColor="#6A4C9230"
+            align="center"
+            justify="center"
+            width={"100%"}
+          >
+            <Image
+              src={item.urlImage}
+              width={["sm", "sm", "lg"]}
+              height="auto"
+              borderRadius="md"
+            />
             <Stack marginLeft={[0, 0, 12]}>
-              <Text fontWeight='bold' fontSize={['lg', 'lg', '2xl']}>{item.title}</Text>
-              <Text fontSize={['md', 'md' ,'lg']}>{item.subtitle}</Text>
+              <Text fontWeight="bold" fontSize={["lg", "lg", "2xl"]}>
+                {item.title}
+              </Text>
+              <Text fontSize={["md", "md", "lg"]}>{item.subtitle}</Text>
+              <Text fontSize={["xs", "sm", "md"]}>{item.description}</Text>
             </Stack>
           </Flex>
-          <Stack marginTop={8} spacing={4}>
-            {item.courses.map(course => {
+          <SimpleGrid columns={[1, 2, 3]} marginTop={8} spacing={4}>
+            {item.courses.map((course) => {
               return (
-                <Stack spacing={2} padding={4} bgColor='white' shadow='md' borderRadius='lg'>
-                  <Stack direction={['column', 'row', 'row']}>
-                    <Text fontWeight='bold' fontSize={['sm', 'md','lg']}>{course.title}</Text>
-                    <Box width='fit-content' borderRadius='full' paddingX={2} bgColor='gray.100'>
-                      <Text>{course.subtitle}</Text>
-                    </Box>
+                <Stack justify='space-between' spacing={4} padding={4} shadow={"lg"} borderRadius={12}>
+                  <Stack spacing={4}>
+                  <Text fontWeight="bold" fontSize={["sm", "md", "lg"]}>
+                    {course.title}
+                  </Text>
+                  <Text fontSize="sm">{course.subtitle}</Text>
+                  <Text color="green.500" fontSize="3xl" fontWeight="bold">
+                    R${course.price}
+                  </Text>
+                  <HStack
+                    width={"fit-content"}
+                    paddingX={2}
+                    borderRadius="full"
+                    bgColor="gray.100"
+                  >
+                    <FiClock color="black" />
+                    <Text fontSize="sm">{course.horary}</Text>
+                    <Text fontSize="sm">-</Text>
+                    <Text fontSize="sm">{course.avaliable} de validade</Text>
+                  </HStack>
                   </Stack>
-                  <Stack direction={['column', 'row', 'row']}>
-                    <Text color='green.500' fontSize='xl' fontWeight='bold'>R${course.price}</Text>
-                    <HStack width={'fit-content'} paddingX={2} borderRadius='full' bgColor='gray.100'><FiClock color="black" /><Text>{course.horary}</Text><Text>-</Text><Text>{course.avaliable}</Text></HStack>
-                  </Stack>
-                  <Text>{course.description}</Text>
-                  <HStack>
-                    <Button onClick={()=>{ window.open(course.link, "_blank");}} colorScheme='blue'><Text >Comprar online</Text></Button>
-                    <Button onClick={handleOpenWpp} colorScheme='whatsapp' variant='outline'><Text>Conversar conosco</Text></Button></HStack>
+                  <Divider/>
+                <Stack>
+                <Button
+                    onClick={() => {
+                      window.open(course.link, "_blank");
+                    }}
+                    colorScheme="blue"
+                  >
+                    <Text>Comprar online</Text>
+                  </Button>
+                  <Button
+                    onClick={handleOpenWpp}
+                    colorScheme="whatsapp"
+                    variant="outline"
+                  >
+                    <Text>Conversar conosco</Text>
+                  </Button>
                 </Stack>
-              )
+                </Stack>
+              );
             })}
-          </Stack>
+          </SimpleGrid>
         </ModalBody>
       </ModalContent>
     </Modal>

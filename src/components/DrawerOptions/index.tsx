@@ -66,19 +66,6 @@ export default function DrawerOptions() {
                         >
                             Para sua empresa
                         </ButtonMotion>
-                        <ButtonMotion
-                            onClick={goTo}
-                            whileHover={{ scale: 1.05 }}
-                            _hover={{
-                                textColor: "white",
-                                background:
-                                    "linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)",
-                            }}
-                            colorScheme={"black"}
-                            variant="outline"
-                        >
-                            Começar agora
-                        </ButtonMotion>
                       </Stack>
                     </DrawerBody>
                 </DrawerContent>

@@ -2,12 +2,13 @@ import BulletItem from "@/components/BulletItem";
 import TopBar from "@/components/TopBar";
 import Values from "@/components/Values";
 
-import { Box, Button, Flex, Heading, SimpleGrid, Stack, Text, useMediaQuery } from "@chakra-ui/react";
+import { Box, Button, Badge, Flex, Heading, SimpleGrid, Stack, Text, useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiChevronsDown } from 'react-icons/fi'
 import { MdComputer, MdDocumentScanner, MdHealthAndSafety, MdSupervisorAccount, MdSubscriptions, MdLocalHospital, MdChevronRight, MdOutlineEmail, MdFileCopy, MdPhone } from "react-icons/md";
 import { GiBrazil } from 'react-icons/gi'
+import { goToWppCourse } from "@/utils";
 
 
 import { Link } from 'react-scroll'
@@ -34,6 +35,11 @@ export default function Home() {
   const handleForYou = useCallback(() => {
     navigation.push("/para-voce");
   }, []);
+
+  const handleVida = useCallback(() => {
+        goToWppCourse('iSafety Vida')
+}, [])
+
 
   return (
     <>
@@ -87,7 +93,7 @@ export default function Home() {
           <BulletItem Icon={MdComputer} text='Treinamentos IN COMPANY' />
         </SimpleGrid>
         <Flex id='products' marginY={12} alignItems='center' justifyContent='center'>
-          <Text textColor='text'>////////////////</Text>
+          <Text textColor='text'>
         </Flex>
         <Stack spacing={12} width='100%' alignItems={isLargerThan1000 ? 'initial' : 'center'}>
           <Stack width='100%' spacing={4} alignItems='center'>
@@ -117,9 +123,15 @@ export default function Home() {
               <Text>
                 Tem como objetivo promover qualidade de vida nos locais de trabalho, tornando o ambiente mais seguro e agradável.
               </Text>
+              <Button onClick={handleVida} variant='outline' colorScheme='green'>
+               Conversar com especialista
+              </Button>
             </Stack>
             <Stack justifyContent='end' borderWidth={1} borderColor='blue.500' width={isLargerThan1000 ? 1 / 3 : '100%'} borderRadius={8} spacing={4} padding={12}>
               <MdFileCopy color="#1982C4" size={36} />
+              <Badge width='fit-content' marginLeft={2} colorScheme="blue" color="#004491">
+                EM BREVE
+              </Badge>
               <Heading textColor='blue.500'>iSafety Documentação</Heading>
               <Text>
                 Tem como objetivo desenvolver documentações de acordo com a legislação pertinente, a fim de auxiliar a empresa a tornar o ambiente de trabalho seguro.

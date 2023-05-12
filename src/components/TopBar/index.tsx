@@ -13,6 +13,7 @@ import {
   MenuDivider,
   Stack,
   useMediaQuery,
+  Badge,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -60,26 +61,23 @@ export default function TopBar() {
         {isLargerThan800 ? (
           <>
             <Menu>
-              <MenuButton as={Button}>Nossos treinamentos</MenuButton>
+              <MenuButton colorScheme="purple" as={Button}>
+                Nossos treinamentos
+              </MenuButton>
               <MenuList>
                 <MenuItem onClick={handleProducts}>Para sua empresa</MenuItem>
                 <MenuItem onClick={handleForYou}>Para você</MenuItem>
               </MenuList>
             </Menu>
-
-            <ButtonMotion
-              onClick={goTo}
-              whileHover={{ scale: 1.05 }}
-              _hover={{
-                textColor: "white",
-                background:
-                  "linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)",
-              }}
-              colorScheme={"black"}
-              variant="outline"
-            >
-              Começar agora
-            </ButtonMotion>
+            <Button disabled colorScheme="green">
+              iSafety Vida
+            </Button>
+            <Button opacity={0.5} variant="outline" colorScheme="blue">
+              Documentação
+              <Badge marginLeft={2} colorScheme="blue" color="#004491">
+                EM BREVE
+              </Badge>
+            </Button>
           </>
         ) : (
           <DrawerOptions />

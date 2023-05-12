@@ -1,9 +1,10 @@
 import { colors } from "@/constants";
-import { HStack, Image, Stack, Text } from "@chakra-ui/react";
+import { Button, HStack, Image, Stack, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useCallback } from "react";
 import { FiClock } from "react-icons/fi";
 import {PeopleCoursesItemProps } from "./types";
+import { goToWppCourse } from "@/utils";
 
 export default function PeopleCourseItem({item, onOpen}: PeopleCoursesItemProps) {
     const StackMotion = motion(Stack)
@@ -11,6 +12,13 @@ export default function PeopleCourseItem({item, onOpen}: PeopleCoursesItemProps)
     const handleOpenModal = useCallback(()=>{
         onOpen(item)
     },[])
+
+    const handleOpenWpp = useCallback(() => {
+        if (item) {
+            goToWppCourse(item.title)
+        }
+    }, [])
+
    
     return (
         <StackMotion onClick={handleOpenModal} cursor='pointer' whileHover={{
@@ -26,17 +34,14 @@ export default function PeopleCourseItem({item, onOpen}: PeopleCoursesItemProps)
                 {item.subtitle}
             </Text>
                </Stack>
-            <HStack padding={2} borderRadius={'lg'} bgColor={'opacity'} opacity={0.7} justify='space-between'>
-                <Text fontSize={'sm'}>
-                    ON-LINE
-                </Text>
-                <Text>
-                    •
-                </Text>
-                <Text fontSize={'sm'}>
-                    IN-COMPANY
-                </Text>
-            </HStack>
+           <Stack>
+           <Button onClick={handleOpenModal} colorScheme="blue">
+                Ver modalidades
+            </Button>
+           <Button onClick={handleOpenWpp} variant='outline' colorScheme="whatsapp">
+                Fale com um consultor
+            </Button>
+           </Stack>
         </StackMotion>
     )
 }
