@@ -18,9 +18,9 @@ import CTAButton from "@/components/CTAButton";
 import illustration from '../assets/illustration.svg'
 import logo_about from '../assets/logo_about.svg'
 import { goToEmail, goToWpp } from "@/utils";
-import FloatWppButton from "@/components/FloatWppButton";
 import { useCallback } from "react";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 export default function Home() {
   const StackMotion = motion(Stack)
@@ -58,6 +58,9 @@ export default function Home() {
         <meta name="rating" content="general" />
       </Head>
       <TopBar />
+      <Script>
+        {`(function(n,r,l,d){try{var h=r.head||r.getElementsByTagName("head")[0],s=r.createElement("script");s.defer=true;s.setAttribute("type","text/javascript");s.setAttribute("src",l);n.neuroleadId=d;h.appendChild(s);}catch(e){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js", "vJyMFGFdB7mdWgpYGHiVg5bzn");`}
+      </Script>
       <Box width='100%' paddingX={isLargerThan1000 ? 12 : 8} backgroundColor={'white'}>
         <Flex marginTop={24} justifyContent={isLargerThan1000 ? 'space-between' : 'center'} alignItems='center'>
           <Stack textAlign={isLargerThan1000 ? 'initial' : 'center'} spacing={isLargerThan1000 ? 12 : 4} width={isLargerThan1000 ? '50%' : '100%'}>
@@ -183,7 +186,6 @@ export default function Home() {
           </Stack>
         </Flex>
       </Box>
-     <FloatWppButton/>
     </>
   )
 }

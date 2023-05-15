@@ -1,5 +1,4 @@
 import CompanyCoursItem from "@/components/CompanyCourseItem";
-import FloatWppButton from "@/components/FloatWppButton";
 import ModalCompanyCourse from "@/components/ModalCompanyCourse";
 import TopBar from "@/components/TopBar";
 import { colors, COMPANY_COURSES } from "@/constants";
@@ -77,7 +76,6 @@ export default function ForCompany() {
         </Box>
       </Box>
       <ModalCompanyCourse isOpen={isOpen} item={currentItem} onClose={onClose}/>
-     <FloatWppButton/>
     </>
   )
 }
