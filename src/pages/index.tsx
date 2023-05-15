@@ -76,7 +76,7 @@ export default function Home() {
               Foque na qualidade de vida da sua empresa, saiba tudo sobre segurança no trabalho.
             </Text>
             <Stack justifyContent={isLargerThan1000 ? 'initial' : 'center'} direction='row' spacing={4}>
-              <CTAButton height={12} />
+              <Button  colorScheme='green' size='md' height={12} width={48}>Começar agora</Button>
               <ButtonMotion onClick={goToWpp} whileHover={{ scale: 1.05 }} _hover={{ textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)' }} height={12} borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Contate-nos</ButtonMotion>
             </Stack>
             <Link offset={-24} to='products' smooth>

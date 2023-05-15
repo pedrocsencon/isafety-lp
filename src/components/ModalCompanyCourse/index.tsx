@@ -43,6 +43,8 @@ export default function ModalCompanyCourse({ isOpen, item, onClose }: ModalCompa
                             <Text fontWeight='bold' fontSize={'xl'}>
                             </Text>
                             <Image width={'100%'} maxHeight={56} alt={item.title} src={item.urlImage} />
+                            
+
                         </Stack>
                         <Stack width={['100%', '100%', '60%']}>
                             <Text opacity={0.5} fontSize={'lg'}>
@@ -51,11 +53,24 @@ export default function ModalCompanyCourse({ isOpen, item, onClose }: ModalCompa
                             <Text >
                                 {item.description}
                             </Text>
+                            <HStack>
                             <HStack width={'fit-content'} padding={2} bgColor='opacity' borderRadius={'lg'}>
                                 <FiClock />
                                 <Text >
                                     {item.horary}
                                 </Text>
+                            </HStack>
+                            <HStack padding={2} backgroundColor={'opacity'}  width={'fit-content'}  borderRadius={'lg'}>
+                                <Text >
+                                    ON-LINE
+                                </Text>
+                                <Text>
+                                    •
+                                </Text>
+                                <Text >
+                                    IN-COMPANY
+                                </Text>
+                            </HStack>
                             </HStack>
                         </Stack>
                     </Stack>

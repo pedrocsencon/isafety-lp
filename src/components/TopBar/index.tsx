@@ -65,7 +65,7 @@ export default function TopBar() {
         {isLargerThan800 ? (
           <>
             <Menu>
-              <MenuButton colorScheme="purple" as={Button}>
+              <MenuButton variant='outline' colorScheme="purple" as={Button}>
                 Nossos treinamentos
               </MenuButton>
               <MenuList>
@@ -73,7 +73,7 @@ export default function TopBar() {
                 <MenuItem onClick={handleForYou}>Para você</MenuItem>
               </MenuList>
             </Menu>
-            <Button onClick={handleVida} disabled colorScheme="green">
+            <Button variant='outline' onClick={handleVida} disabled colorScheme="green">
               iSafety Vida
             </Button>
             <Button opacity={0.5} variant="outline" colorScheme="blue">
