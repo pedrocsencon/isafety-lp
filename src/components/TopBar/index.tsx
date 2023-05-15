@@ -1,4 +1,4 @@
-import { goTo } from "@/utils";
+import { goTo, goToWppCourse } from "@/utils";
 import {
   Box,
   Button,
@@ -40,6 +40,10 @@ export default function TopBar() {
     navigation.push("/");
   }, []);
 
+  const handleVida = useCallback(() => {
+    goToWppCourse('iSafety Vida')
+}, [])
+
   return (
     <Flex
       position={"fixed"}
@@ -69,7 +73,7 @@ export default function TopBar() {
                 <MenuItem onClick={handleForYou}>Para você</MenuItem>
               </MenuList>
             </Menu>
-            <Button disabled colorScheme="green">
+            <Button onClick={handleVida} disabled colorScheme="green">
               iSafety Vida
             </Button>
             <Button opacity={0.5} variant="outline" colorScheme="blue">

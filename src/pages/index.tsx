@@ -93,7 +93,6 @@ export default function Home() {
           <BulletItem Icon={MdComputer} text='Treinamentos IN COMPANY' />
         </SimpleGrid>
         <Flex id='products' marginY={12} alignItems='center' justifyContent='center'>
-          <Text textColor='text'>
         </Flex>
         <Stack spacing={12} width='100%' alignItems={isLargerThan1000 ? 'initial' : 'center'}>
           <Stack width='100%' spacing={4} alignItems='center'>

@@ -102,7 +102,7 @@ export const COMPANY_COURSES: CompanyCoursesInfo[] = [
     availability: 2,
     description:
       "Esta norma regulamentadora visa estabelecer parâmetros que permitam a adaptação das condições de trabalho as características psicofisiológicas dos trabalhadores, proporcionando o máximo de conforto segurança e desempenho eficiente aos colaboradores.",
-    horary: "2 ou 4 horas",
+    horary: "2 à 4 horas",
     urlImage:
       "https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2021/09/WhatsApp-Image-2021-07-28-at-13.15.15-1.jpeg",
   },
@@ -113,7 +113,7 @@ export const COMPANY_COURSES: CompanyCoursesInfo[] = [
     availability: 2,
     description:
       "Esta norma regulamentadora é destinada a trabalhadores da construção civil e aborda os riscos e medidas necessárias nas condições e no meio ambiente de trabalho na indústria da construção.",
-    horary: "4 ou 16 horas",
+    horary: "4 à 16 horas",
     urlImage:
       "https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2021/09/Nr18-1.jpg",
   },
@@ -123,7 +123,7 @@ export const COMPANY_COURSES: CompanyCoursesInfo[] = [
     availability: 2,
     description:
       "Esta norma regulamentadora tem como objetivo capacitar profissional com requisitos mínimos para a gestão de segurança do trabalho contra fatores de risco de acidentes provenientes das atividades de produtos inflamáveis. Deixando apto para o trabalho e regulamentado conforme as exigências do ministério do trabalho. ",
-    horary: "16 ou 32 horas",
+    horary: "16 à 32 horas",
     urlImage:
       "https://grupoisafety.formasegead.com.br/wp-content/uploads/sites/410/2021/10/joao-5.png",
   },

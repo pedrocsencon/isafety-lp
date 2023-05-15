@@ -43,17 +43,6 @@ export default function ModalCompanyCourse({ isOpen, item, onClose }: ModalCompa
                             <Text fontWeight='bold' fontSize={'xl'}>
                             </Text>
                             <Image width={'100%'} maxHeight={56} alt={item.title} src={item.urlImage} />
-                            <HStack width={'100%'} >
-                                <Text >
-                                    ON-LINE
-                                </Text>
-                                <Text>
-                                    •
-                                </Text>
-                                <Text >
-                                    IN-COMPANY
-                                </Text>
-                            </HStack>
                         </Stack>
                         <Stack width={['100%', '100%', '60%']}>
                             <Text opacity={0.5} fontSize={'lg'}>
