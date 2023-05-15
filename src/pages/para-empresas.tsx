@@ -5,6 +5,7 @@ import { colors, COMPANY_COURSES } from "@/constants";
 import { CompanyCoursesInfo } from "@/constants/types";
 import { Box, Divider, Heading, HStack, SimpleGrid, Stack, Text, useDisclosure, useMediaQuery } from "@chakra-ui/react";
 import Head from "next/head";
+import Script from "next/script";
 import { useCallback, useState } from "react";
 import { FiBookOpen, FiFileText, FiPocket, FiVideo } from "react-icons/fi";
 
@@ -27,6 +28,9 @@ export default function ForCompany() {
         />
       </Head>
       <TopBar />
+      <Script>
+        {`(function(n,r,l,d){try{var h=r.head||r.getElementsByTagName("head")[0],s=r.createElement("script");s.defer=true;s.setAttribute("type","text/javascript");s.setAttribute("src",l);n.neuroleadId=d;h.appendChild(s);}catch(e){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js", "vJyMFGFdB7mdWgpYGHiVg5bzn");`}
+      </Script>
       <Box width='100%' >
         <Stack spacing={4} paddingTop={36} paddingBottom={24} bgGradient={`linear-gradient(60deg,  ${colors[Math.floor(Math.random()*colors.length)]}, ${colors[Math.floor(Math.random()*colors.length)]}, ${colors[Math.floor(Math.random()*colors.length)]})`} textAlign='center' alignItems='center' paddingX={[4, 12, 56]} justifyContent='center' width='100%'>
           <Heading size={['lg', 'xl', '2xl']}>

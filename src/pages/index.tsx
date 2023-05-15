@@ -15,7 +15,7 @@ import { Link } from 'react-scroll'
 import Head from "next/head";
 
 import CTAButton from "@/components/CTAButton";
-import illustration from '../assets/illustration.svg'
+import illustration from '../assets/worker.png'
 import logo_about from '../assets/logo_about.svg'
 import { goToEmail, goToWpp } from "@/utils";
 import { useCallback } from "react";
@@ -61,14 +61,14 @@ export default function Home() {
       <Script>
         {`(function(n,r,l,d){try{var h=r.head||r.getElementsByTagName("head")[0],s=r.createElement("script");s.defer=true;s.setAttribute("type","text/javascript");s.setAttribute("src",l);n.neuroleadId=d;h.appendChild(s);}catch(e){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js", "vJyMFGFdB7mdWgpYGHiVg5bzn");`}
       </Script>
-      <Box width='100%' paddingX={isLargerThan1000 ? 12 : 8} backgroundColor={'white'}>
-        <Flex marginTop={24} justifyContent={isLargerThan1000 ? 'space-between' : 'center'} alignItems='center'>
-          <Stack textAlign={isLargerThan1000 ? 'initial' : 'center'} spacing={isLargerThan1000 ? 12 : 4} width={isLargerThan1000 ? '50%' : '100%'}>
-            <Box >
+      <Box  width='100%' paddingX={isLargerThan1000 ? 12 : 8} backgroundColor={'white'}>
+        <Flex marginTop={24} marginBottom={12} justifyContent={isLargerThan1000 ? 'space-between' : 'center'} alignItems='center'>
+          <Stack marginTop={isLargerThan1000 ? 12 : 0} textAlign={isLargerThan1000 ? 'initial' : 'center'} spacing={isLargerThan1000 ? 12 : 4} width={isLargerThan1000 ? '50%' : '100%'}>
+            <Box width={isLargerThan1000 ? '90%' : '100%'}>
               <Heading size={['xl', '2xl', '2xl']}>
                 Diga olá 👋🏽,
               </Heading>
-              <Heading size={['xl', '2xl', '2xl']}>
+              <Heading  size={['xl', '2xl', '2xl']}>
                 para um novo jeito de aprender sobre <Heading size={['xl', '2xl', '2xl']} id='gradientText2'>segurança no trabalho</Heading>
               </Heading>
             </Box>
@@ -86,7 +86,11 @@ export default function Home() {
               </StackMotion>
             </Link>
           </Stack>
-          {isLargerThan1000 && <Image alt="illustration" src={illustration} />}
+          {isLargerThan1000 && (
+            <Box position='absolute' right={0} width='55%'>
+              <Image alt="illustration" src={illustration} />
+            </Box>
+          )}
         </Flex>
         <SimpleGrid columns={[1, 2, 5]} spacing={4} paddingY={12} justifyContent='center' alignItems='center' width='100%'>
           <BulletItem Icon={GiBrazil} text='Atuação nacional' />
