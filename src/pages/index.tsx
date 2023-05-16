@@ -10,7 +10,7 @@ import { MdComputer, MdDocumentScanner, MdHealthAndSafety, MdSupervisorAccount, 
 import { GiBrazil } from 'react-icons/gi'
 import { goToInsta, goToWppCourse } from "@/utils";
 
-import certified from '../assets/certified.png'
+import certified from '../assets/certificados.png'
 
 import { Link } from 'react-scroll'
 import Head from "next/head";
@@ -194,7 +194,7 @@ export default function Home() {
         </Flex>
         <Stack paddingTop={12} justifyContent='center' width='100%' alignItems='center'>
             <Text fontSize='3xl'>Nossos registros</Text>
-              <Image width={720} alt="certified" src={certified}/>
+              <Image width={500} alt="certified" src={certified}/>
         </Stack>
       </Box>
     </>
