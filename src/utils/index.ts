@@ -14,3 +14,7 @@ export function goTo(){
   export function goToEmail(){
     window.open('mailto:comercial@grupoisafety.com.br');
   }
+
+  export function goToInsta(){
+    window.open('https://www.instagram.com/grupo.isafety/');
+  }

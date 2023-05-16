@@ -7,7 +7,6 @@ import {
     ModalBody,
     ModalCloseButton,
     Button,
-    HStack,
     Text,
     Stack,
 } from '@chakra-ui/react'

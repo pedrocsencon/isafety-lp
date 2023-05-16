@@ -2,14 +2,15 @@ import BulletItem from "@/components/BulletItem";
 import TopBar from "@/components/TopBar";
 import Values from "@/components/Values";
 
-import { Box, Button, Badge, Flex, Heading, SimpleGrid, Stack, Text, useMediaQuery } from "@chakra-ui/react";
+import { Box, Button, Badge, Flex, Heading, SimpleGrid, Stack, Text, useMediaQuery, HStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiChevronsDown, FiInstagram } from 'react-icons/fi'
 import { MdComputer, MdDocumentScanner, MdHealthAndSafety, MdSupervisorAccount, MdSubscriptions, MdLocalHospital, MdChevronRight, MdOutlineEmail, MdFileCopy, MdPhone } from "react-icons/md";
 import { GiBrazil } from 'react-icons/gi'
-import { goToWppCourse } from "@/utils";
+import { goToInsta, goToWppCourse } from "@/utils";
 
+import certified from '../assets/certified.png'
 
 import { Link } from 'react-scroll'
 import Head from "next/head";
@@ -185,15 +186,16 @@ export default function Home() {
             <MdPhone size={'24'} color='black' />
               <Text>(61) 9 8189-4455</Text>
             </StackMotion>
-             <StackMotion onClick={goToEmail} cursor='pointer' whileHover={{scale: 1.05, borderWidth: 1, borderColor: 'black', padding: 4, borderRadius: 48}} direction='row' alignItems='center' spacing={2}>
+             <StackMotion onClick={goToInsta} cursor='pointer' whileHover={{scale: 1.05, borderWidth: 1, borderColor: 'black', padding: 4, borderRadius: 48}} direction='row' alignItems='center' spacing={2}>
               <FiInstagram size={'24'} color='black' />
               <Text>Grupo iSafety</Text>
             </StackMotion>
           </Stack>
         </Flex>
-        <Flex justifyContent='center' width='100%' alignItems='center'>
-          <Text>teste</Text>
-        </Flex>
+        <Stack paddingTop={12} justifyContent='center' width='100%' alignItems='center'>
+            <Text fontSize='3xl'>Nossos registros</Text>
+              <Image width={720} alt="certified" src={certified}/>
+        </Stack>
       </Box>
     </>
   )
