@@ -27,7 +27,7 @@ export default function CompanyCoursItem({item, onOpen}: CompanyCoursesItemProps
         <StackMotion  whileHover={{
             scale: 1.02,
             background: `linear-gradient(60deg,  ${colors[Math.floor(Math.random()*colors.length)]}, transparent)`,
-        }} justifyContent='space-between' height={'27rem'} padding={4} borderRadius={'lg'} shadow='md' bgColor='white'>
+        }} justifyContent='space-between' padding={4} borderRadius={'lg'} shadow='md' bgColor='white'>
                <Stack spacing={4}>
                <Image  maxHeight={48} alt={item.title} src={item.urlImage}/>
             <Text fontWeight='bold'>

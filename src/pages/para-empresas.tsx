@@ -1,20 +1,26 @@
+import AllCoursesModal from "@/components/AllCoursesModal";
 import CompanyCoursItem from "@/components/CompanyCourseItem";
 import ModalCompanyCourse from "@/components/ModalCompanyCourse";
 import TopBar from "@/components/TopBar";
 import { colors, COMPANY_COURSES } from "@/constants";
 import { CompanyCoursesInfo } from "@/constants/types";
-import { Box, Divider, Heading, HStack, SimpleGrid, Stack, Text, useDisclosure, useMediaQuery } from "@chakra-ui/react";
+import { Box, Button, Divider, Heading, HStack, SimpleGrid, Stack, Text, useDisclosure, useMediaQuery } from "@chakra-ui/react";
 import Head from "next/head";
 import Script from "next/script";
 import { useCallback, useState } from "react";
 import { FiBookOpen, FiFileText, FiPocket, FiVideo } from "react-icons/fi";
 
 export default function ForCompany() {
-  const {onClose, isOpen, onOpen} = useDisclosure();
+  const modalCourse = useDisclosure();
+  const modalAllCourses = useDisclosure();
   const [currentItem, setCurrentItem] = useState<CompanyCoursesInfo>()
   const handleOpenModal = useCallback((item: CompanyCoursesInfo)=>{
     setCurrentItem(item)
-    onOpen();
+    modalCourse.onOpen();
+  },[])
+
+  const allCourses = useCallback(()=>{
+    modalAllCourses.onOpen()
   },[])
 
   const renderItem = useCallback((item: CompanyCoursesInfo)=> <CompanyCoursItem onOpen={handleOpenModal} item={item}/>,[])
@@ -74,12 +80,50 @@ export default function ForCompany() {
           <Text marginTop={4} fontWeight='bold' fontSize={'2xl'} width='100%'>
             Cursos mais vendidos para empresas
           </Text>
-          <SimpleGrid marginTop={4} spacing={4} columns={[1, 2, 3, 4, 5]}>
+          <SimpleGrid marginTop={4} spacing={4} columns={[1, 2, 3, 4]}>
             {COMPANY_COURSES.map(renderItem)}
+            <Stack
+              cursor="pointer"
+              padding={4}
+              borderRadius={"lg"}
+              shadow="md"
+              justifyContent='space-between'
+              bgColor="white"
+              borderWidth={4}
+              borderColor={"blue.300"}
+            >
+              <Stack
+                spacing={4}
+                padding={12}
+                bgColor={"blue.50"}
+                borderRadius={"lg"}
+              >
+                <Text
+                  fontSize="2xl"
+                  textAlign="center"
+                  fontWeight="bold"
+                  color={"blue.500"}
+                >
+                  Outros cursos para você
+                </Text>
+              </Stack>
+              <Stack paddingX={12}>
+                <Text  opacity={0.7} fontSize="sm" fontWeight="bold">
+                  - Operações de Soldagem e Corte a Quente
+                </Text>
+                <Text opacity={0.3} fontSize="sm" fontWeight="bold">
+                  - Auxiliar de Segurança do Trabalho...
+                </Text>
+              </Stack>
+              <Button onClick={allCourses} colorScheme="blue">
+                Ver todos cursos
+              </Button>
+            </Stack>
           </SimpleGrid>
         </Box>
       </Box>
-      <ModalCompanyCourse isOpen={isOpen} item={currentItem} onClose={onClose}/>
+      <ModalCompanyCourse isOpen={modalCourse.isOpen} item={currentItem} onClose={modalCourse.onClose}/>
+      <AllCoursesModal isOpen={modalAllCourses.isOpen} onClose={modalAllCourses.onClose} />
     </>
   )
 }

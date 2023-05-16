@@ -5,7 +5,7 @@ import Values from "@/components/Values";
 import { Box, Button, Badge, Flex, Heading, SimpleGrid, Stack, Text, useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FiChevronsDown } from 'react-icons/fi'
+import { FiChevronsDown, FiInstagram } from 'react-icons/fi'
 import { MdComputer, MdDocumentScanner, MdHealthAndSafety, MdSupervisorAccount, MdSubscriptions, MdLocalHospital, MdChevronRight, MdOutlineEmail, MdFileCopy, MdPhone } from "react-icons/md";
 import { GiBrazil } from 'react-icons/gi'
 import { goToWppCourse } from "@/utils";
@@ -14,14 +14,12 @@ import { goToWppCourse } from "@/utils";
 import { Link } from 'react-scroll'
 import Head from "next/head";
 
-import CTAButton from "@/components/CTAButton";
 import illustration from '../assets/worker.png'
 import logo_about from '../assets/logo_about.svg'
 import { goToEmail, goToWpp } from "@/utils";
 import { useCallback } from "react";
 import { useRouter } from "next/router";
 import Script from "next/script";
-
 export default function Home() {
   const StackMotion = motion(Stack)
   const ButtonMotion = motion(Button)
@@ -76,7 +74,7 @@ export default function Home() {
               Foque na qualidade de vida da sua empresa, saiba tudo sobre segurança no trabalho.
             </Text>
             <Stack justifyContent={isLargerThan1000 ? 'initial' : 'center'} direction='row' spacing={4}>
-              <Button  colorScheme='green' size='md' height={12} width={48}>Começar agora</Button>
+              <Link to="products" smooth offset={-36}><Button  colorScheme='green' size='md' height={12} width={48}>Começar agora</Button></Link>
               <ButtonMotion onClick={goToWpp} whileHover={{ scale: 1.05 }} _hover={{ textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)' }} height={12} borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Contate-nos</ButtonMotion>
             </Stack>
             <Link offset={-24} to='products' smooth>
@@ -177,7 +175,7 @@ export default function Home() {
          </Stack>
          <ButtonMotion onClick={goToWpp} whileHover={{ scale: 1.02 }} _hover={{ textColor: 'white', background: 'linear-gradient(60deg, #FFCA3A, #FF595E, #6A4C93, #1982C4, #8AC926)' }} height={12} justifyContent='space-between' borderRadius={8} variant='outline' colorScheme='black' paddingX={8}>Entrar em contato</ButtonMotion>
         </Stack>
-        <Flex paddingY={24} justifyContent='center' width='100%' alignItems='center'>
+        <Flex paddingTop={24} justifyContent='center' width='100%' alignItems='center'>
           <Stack spacing={4} direction={['column', 'column', 'row']}>
             <StackMotion onClick={goToEmail} cursor='pointer' whileHover={{scale: 1.05, borderWidth: 1, borderColor: 'black', padding: 4, borderRadius: 48}} direction='row' alignItems='center' spacing={2}>
               <MdOutlineEmail size={'24'} color='black' />
@@ -187,7 +185,14 @@ export default function Home() {
             <MdPhone size={'24'} color='black' />
               <Text>(61) 9 8189-4455</Text>
             </StackMotion>
+             <StackMotion onClick={goToEmail} cursor='pointer' whileHover={{scale: 1.05, borderWidth: 1, borderColor: 'black', padding: 4, borderRadius: 48}} direction='row' alignItems='center' spacing={2}>
+              <FiInstagram size={'24'} color='black' />
+              <Text>Grupo iSafety</Text>
+            </StackMotion>
           </Stack>
+        </Flex>
+        <Flex justifyContent='center' width='100%' alignItems='center'>
+          <Text>teste</Text>
         </Flex>
       </Box>
     </>
