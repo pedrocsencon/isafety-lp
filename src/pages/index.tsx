@@ -194,7 +194,7 @@ export default function Home() {
         </Flex>
         <Stack paddingTop={12} justifyContent='center' width='100%' alignItems='center'>
             <Text fontSize='3xl'>Nossos registros</Text>
-              <Image width={500} alt="certified" src={certified}/>
+              <Image width={350} alt="certified" src={certified}/>
         </Stack>
       </Box>
     </>
