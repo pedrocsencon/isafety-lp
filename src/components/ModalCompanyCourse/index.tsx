@@ -14,6 +14,7 @@ import {
     Stack,
     Image,
 } from '@chakra-ui/react'
+import { useRouter } from 'next/router'
 import { useCallback } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
 import { FiClock } from 'react-icons/fi'

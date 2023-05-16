@@ -19,8 +19,9 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Script from "next/script";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   FiBookOpen,
   FiFile,
@@ -33,8 +34,25 @@ export default function ForCompany() {
   const modalCourse = useDisclosure();
   const modalAllCourses = useDisclosure();
   const [currentItem, setCurrentItem] = useState<ListPeopleCourseItem>();
-  const handleOpenModal = useCallback((item: ListPeopleCourseItem) => {
-    setCurrentItem(item);
+  const router = useRouter();
+  const { course } = router.query;
+  console.log(course)
+  
+
+  useEffect(()=>{
+    if(course){
+      if(PEOPLE_COURSES.some(comp=> comp.title.toLowerCase().includes(String(course).toLowerCase()))){
+        handleOpenModal(PEOPLE_COURSES.find(comp=> comp.title.toLowerCase().includes(String(course).toLowerCase())))
+      }
+    }
+  },[course])
+
+
+
+  const handleOpenModal = useCallback((item?: ListPeopleCourseItem) => {
+    setCurrentItem(item)
+    router.query.course = item?.title
+    router.push(router)
     modalCourse.onOpen();
   }, []);
 
@@ -44,7 +62,6 @@ export default function ForCompany() {
     ),
     []
   );
-
 
     const allCourses = useCallback(()=>{
       modalAllCourses.onOpen()
