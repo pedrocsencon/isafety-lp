@@ -72,6 +72,11 @@ export default function ModalPeopleCourse({
               </Text>
               <Text fontSize={["md", "md", "lg"]}>{item.subtitle}</Text>
               <Text fontSize={["xs", "sm", "md"]}>{item.description}</Text>
+              <HStack padding={2} backgroundColor={'#6A4C9220'}  width={'fit-content'}  borderRadius={'lg'}>
+                                <Text fontWeight='bold' fontSize='sm'>
+                                    Válido por 12 meses (em todo território nacional)
+                                </Text>
+                            </HStack>
             </Stack>
           </Flex>
           <SimpleGrid columns={[1, 2, 3]} marginTop={8} spacing={4}>

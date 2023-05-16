@@ -56,21 +56,26 @@ export default function ModalCompanyCourse({ isOpen, item, onClose }: ModalCompa
                             <HStack>
                             <HStack width={'fit-content'} padding={2} bgColor='opacity' borderRadius={'lg'}>
                                 <FiClock />
-                                <Text >
+                                <Text fontSize='sm'>
                                     {item.horary}
                                 </Text>
                             </HStack>
                             <HStack padding={2} backgroundColor={'opacity'}  width={'fit-content'}  borderRadius={'lg'}>
-                                <Text >
+                                <Text fontSize='sm'>
                                     ON-LINE
                                 </Text>
-                                <Text>
+                                <Text fontSize='sm'> 
                                     •
                                 </Text>
-                                <Text >
+                                <Text fontSize='sm'>
                                     IN-COMPANY
                                 </Text>
                             </HStack>
+                            </HStack>
+                            <HStack padding={2} backgroundColor={'opacity'}  width={'fit-content'}  borderRadius={'lg'}>
+                                <Text fontSize='sm'>
+                                    Válido por 12 meses (em todo território nacional)
+                                </Text>
                             </HStack>
                         </Stack>
                     </Stack>
